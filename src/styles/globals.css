@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --electric-primary: #0ea5e9;
+  --electric-secondary: #facc15;
+  --voltage-glow: #fde047;
+  --power-dark: #1e293b;
+  --power-light: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0ea5e9, #facc15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #facc15, #0ea5e9);
+}
+
+/* ⚡ ADVANCED HOVER EFFECTS ⚡ */
+
+/* Electric Button Hover */
+.electric-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.electric-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(14, 165, 233, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.electric-button:hover::before {
+  left: 100%;
+}
+
+.electric-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5), 0 0 40px rgba(14, 165, 233, 0.3),
+    0 0 60px rgba(14, 165, 233, 0.1);
+}
+
+/* Voltage Button Hover */
+.voltage-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.voltage-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(253, 224, 71, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.voltage-button:hover::before {
+  left: 100%;
+}
+
+.voltage-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(253, 224, 71, 0.5), 0 0 40px rgba(253, 224, 71, 0.3),
+    0 0 60px rgba(253, 224, 71, 0.1);
+}
+
+/* Card Hover Effects */
+.electric-card {
+  position: relative;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.electric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(14, 165, 233, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+}
+
+.electric-card:hover::before {
+  opacity: 1;
+}
+
+.electric-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2),
+    0 0 30px rgba(14, 165, 233, 0.1);
+}
+
+/* Magnetic Hover Effect */
+.magnetic {
+  transition: transform 0.2s ease-out;
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Icon Hover Effects */
+.icon-electric:hover {
+  color: #0ea5e9;
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.8));
+  animation: electricPulse 0.5s ease-in-out;
+}
+
+.icon-voltage:hover {
+  color: #facc15;
+  filter: drop-shadow(0 0 10px rgba(253, 224, 71, 0.8));
+  animation: voltagePulse 0.5s ease-in-out;
+}
+
+@keyframes electricPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes voltagePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Text Glow Hover */
+.text-glow-hover:hover {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor,
+    0 0 30px currentColor;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Floating Effect */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Electric effect utilities */
+.electric-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.electric-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(45deg, #0ea5e9, #facc15, #0ea5e9);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+.electric-pulse {
+  animation: electricPulse 2s ease-in-out infinite;
+}
+
+.spark-effect {
+  position: relative;
+}
+
+.spark-effect::after {
+  content: "⚡";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: #facc15;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: sparkGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkGlow {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Particle Canvas Styles */
+.particle-canvas {
+  background: transparent;
+  mix-blend-mode: screen;
+}
+
+/* Electric Letter Spark Effect */
+.letter-spark {
+  animation: letterSpark 0.3s ease-out;
+  transform-origin: center;
+}
+
+@keyframes letterSpark {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 5px currentColor);
+  }
+  50% {
+    transform: scale(1.2);
+    filter: brightness(2) drop-shadow(0 0 20px currentColor)
+      drop-shadow(0 0 40px currentColor);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 5px currentColor);
+  }
+}
+
+/* Enhanced Glow Effects */
+.glow-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor,
+    0 0 30px currentColor, 0 0 40px currentColor;
+}
+
+/* 3D Text Effect */
+.text-3d {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9), 2px 2px 0px rgba(0, 0, 0, 0.8),
+    3px 3px 0px rgba(0, 0, 0, 0.7), 4px 4px 0px rgba(0, 0, 0, 0.6),
+    5px 5px 10px rgba(0, 0, 0, 0.5), 0 0 20px currentColor;
+}
+
+/* Loading animation */
+.loading-spark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #334155;
+  border-radius: 50%;
+  border-top-color: #0ea5e9;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5), 0 0 40px rgba(14, 165, 233, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.hover-spark:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(253, 224, 71, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Responsive text sizes */
+@layer utilities {
+  .text-responsive-xl {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .text-responsive-lg {
+    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .text-responsive-md {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+}

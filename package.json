@@ -1,0 +1,63 @@
+{
+  "name": "voltcraft-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium electrical services website with 3D animations and modern UI",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.1",
+    "@fontsource/orbitron": "^5.1.1",
+    "@fontsource/exo-2": "^5.1.1",
+    "@fontsource/rajdhani": "^5.1.1",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^3.10.0",
+    "@react-three/drei": "^9.99.0",
+    "@react-three/fiber": "^8.15.0",
+    "@react-three/postprocessing": "^2.19.0",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.59",
+    "@stripe/react-stripe-js": "^3.1.1",
+    "@stripe/stripe-js": "^5.5.0",
+    "framer-motion": "^11.18.1",
+    "lucide-react": "^0.460.0",
+    "next": "15.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.54.2",
+    "react-hot-toast": "^2.5.1",
+    "react-intersection-observer": "^9.15.0",
+    "react-confetti": "^6.1.0",
+    "three": "^0.160.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/three": "^0.160.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "autoprefixer": "^10.4.20"
+  },
+  "keywords": [
+    "electrical",
+    "florida-keys",
+    "premium",
+    "3d-website",
+    "nextjs",
+    "professional"
+  ],
+  "author": "VoltCraft Pro Development Team",
+  "license": "MIT"
+}
