@@ -1,25 +1,23 @@
-# ⚡ VoltCraft Pro
+# PE Solutions
 
-A modern, professional electrical services website built with Next.js 15. Features stunning 3D animations, responsive design, and a comprehensive business presentation for electrical contractors in the Florida Keys.
+Professional electrical engineering services website for PE Solutions e.U. - Austria's premier electrical engineering company.
 
-## Features
+## About
 
-- **Modern Design**: Clean, professional interface with electrical-themed animations
-- **3D Effects**: Interactive particle system and animated electrical sparks
-- **Responsive Layout**: Optimized for all devices and screen sizes
-- **Business Sections**: Services, portfolio, testimonials, emergency contact, and more
-- **Contact Forms**: Professional inquiry system with form validation
-- **Performance**: Built with Next.js 15 for optimal loading speeds
+PE Solutions e.U. provides comprehensive electrical engineering services including:
 
-## Tech Stack
+- Technical Drafting (CAD drawings, circuit diagrams)
+- On-site Construction Supervision
+- Project Management
+- Energy Consulting
 
-- Next.js 15
-- React 18
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Three.js
-- React Hook Form
+**Company Details:**
+
+- Business: PE Solutions e.U.
+- Owner: Ing. Mijo Petrovic
+- Location: 2604 Theresienfeld, Bahnstraße 31, Austria
+- Phone: +43 664 142 6563
+- Email: office@pe-solutions.at
 
 ## Getting Started
 
@@ -39,15 +37,11 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## Project Structure
+## Technologies Used
 
-```
-src/
-├── components/         # React components
-├── pages/             # Next.js pages
-└── styles/            # Global styles
-```
-
-## License
-
-MIT
+- Next.js 15 with TypeScript
+- TailwindCSS for styling
+- Framer Motion for animations
+- React Three Fiber for 3D elements
+- React Hook Form for form handling
+- Lucide React for icons

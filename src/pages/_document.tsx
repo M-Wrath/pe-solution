@@ -7,37 +7,37 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Premium electrical services in Florida Keys - VoltCraft Pro delivers professional electrical solutions with cutting-edge technology"
+          content="Professional electrical engineering services in Austria - PE Solutions delivers expert electrical solutions with modern technology"
         />
         <meta
           name="keywords"
-          content="electrician, Florida Keys, electrical services, smart home, LED lighting, emergency electrical"
+          content="electrician, Austria, electrical engineering, technical drafting, project management, energy consulting"
         />
-        <meta name="author" content="VoltCraft Pro" />
+        <meta name="author" content="PE Solutions" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="VoltCraft Pro - Premium Electrical Services Florida Keys"
+          content="PE Solutions - Professional Electrical Engineering Services Austria"
         />
         <meta
           property="og:description"
-          content="Professional electrical contractor serving Florida Keys with premium electrical solutions, smart home integration, and 24/7 emergency service."
+          content="Professional electrical engineering contractor serving Austria with expert electrical solutions, technical drafting, and project management services."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://voltcraft-pro.com" />
+        <meta property="og:url" content="https://pe-solutions.at" />
         <meta property="og:image" content="/og-image.jpg" />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="VoltCraft Pro - Premium Electrical Services"
+          content="PE Solutions - Professional Electrical Engineering Services"
         />
         <meta
           name="twitter:description"
-          content="Professional electrical contractor serving Florida Keys"
+          content="Professional electrical engineering contractor serving Austria"
         />
         <meta name="twitter:image" content="/twitter-image.jpg" />
 

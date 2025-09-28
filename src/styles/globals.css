@@ -1,13 +1,45 @@
+/* Adobe Fan Heiti Std B and Abadi fonts for pe solutions branding */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom font fallbacks for pe solutions branding */
+@font-face {
+  font-family: "PE Solutions";
+  src: local("Adobe Fan Heiti Std B"), local("AdobeFanHeitiStd-Bold"),
+    local("Helvetica Neue Bold"), local("Arial Black"), local("Impact");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PE Solutions Light";
+  src: local("Abadi"), local("Abadi MT"), local("Century Gothic"),
+    local("Avenir Next"), local("Trebuchet MS");
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* Ensure font rendering optimization */
+.font-pe-solutions {
+  font-family: "PE Solutions", "Adobe Fan Heiti Std B", "Arial Black", "Impact",
+    sans-serif;
+  font-weight: bold;
+}
+
+.font-pe-solutions-light {
+  font-family: "PE Solutions Light", "Abadi", "Century Gothic", "Avenir Next",
+    "Trebuchet MS", sans-serif;
+  font-weight: 300;
+}
+
 :root {
-  --electric-primary: #0ea5e9;
-  --electric-secondary: #facc15;
-  --voltage-glow: #fde047;
-  --power-dark: #1e293b;
-  --power-light: #f8fafc;
+  --primary-green: #22c55e;
+  --accent-green: #84cc16;
+  --secondary-dark: #1e293b;
+  --secondary-light: #f8fafc;
+  --primary-glow: #4ade80;
 }
 
 * {
@@ -21,6 +53,10 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -43,17 +79,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0ea5e9, #facc15);
+  background: linear-gradient(135deg, #22c55e, #84cc16);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #facc15, #0ea5e9);
+  background: linear-gradient(135deg, #84cc16, #22c55e);
 }
 
 /* ⚡ ADVANCED HOVER EFFECTS ⚡ */
 
-/* Electric Button Hover */
+/* Primary Green Button Hover */
 .electric-button {
   position: relative;
   overflow: hidden;
@@ -70,7 +106,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(14, 165, 233, 0.4),
+    rgba(34, 197, 94, 0.4),
     transparent
   );
   transition: left 0.5s ease;
@@ -82,11 +118,11 @@ body {
 
 .electric-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5), 0 0 40px rgba(14, 165, 233, 0.3),
-    0 0 60px rgba(14, 165, 233, 0.1);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3),
+    0 0 60px rgba(34, 197, 94, 0.1);
 }
 
-/* Voltage Button Hover */
+/* Accent Green Button Hover */
 .voltage-button {
   position: relative;
   overflow: hidden;
@@ -103,7 +139,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(253, 224, 71, 0.4),
+    rgba(132, 204, 22, 0.4),
     transparent
   );
   transition: left 0.5s ease;
@@ -115,8 +151,8 @@ body {
 
 .voltage-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(253, 224, 71, 0.5), 0 0 40px rgba(253, 224, 71, 0.3),
-    0 0 60px rgba(253, 224, 71, 0.1);
+  box-shadow: 0 0 20px rgba(132, 204, 22, 0.5), 0 0 40px rgba(132, 204, 22, 0.3),
+    0 0 60px rgba(132, 204, 22, 0.1);
 }
 
 /* Card Hover Effects */
@@ -133,7 +169,7 @@ body {
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(14, 165, 233, 0.1),
+    rgba(34, 197, 94, 0.1),
     transparent
   );
   opacity: 0;
@@ -147,8 +183,8 @@ body {
 
 .electric-card:hover {
   transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2),
-    0 0 30px rgba(14, 165, 233, 0.1);
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2),
+    0 0 30px rgba(34, 197, 94, 0.1);
 }
 
 /* Magnetic Hover Effect */
@@ -162,14 +198,14 @@ body {
 
 /* Icon Hover Effects */
 .icon-electric:hover {
-  color: #0ea5e9;
-  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.8));
+  color: #22c55e;
+  filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8));
   animation: electricPulse 0.5s ease-in-out;
 }
 
 .icon-voltage:hover {
-  color: #facc15;
-  filter: drop-shadow(0 0 10px rgba(253, 224, 71, 0.8));
+  color: #84cc16;
+  filter: drop-shadow(0 0 10px rgba(132, 204, 22, 0.8));
   animation: voltagePulse 0.5s ease-in-out;
 }
 
@@ -226,7 +262,7 @@ body {
   position: absolute;
   inset: 0;
   padding: 2px;
-  background: linear-gradient(45deg, #0ea5e9, #facc15, #0ea5e9);
+  background: linear-gradient(45deg, #22c55e, #84cc16, #22c55e);
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
@@ -250,7 +286,7 @@ body {
   position: absolute;
   top: -10px;
   right: -10px;
-  color: #facc15;
+  color: #84cc16;
   font-size: 1.2rem;
   opacity: 0;
   animation: sparkGlow 1.5s ease-in-out infinite;
@@ -266,12 +302,6 @@ body {
     opacity: 1;
     transform: scale(1.2);
   }
-}
-
-/* Particle Canvas Styles */
-.particle-canvas {
-  background: transparent;
-  mix-blend-mode: screen;
 }
 
 /* Electric Letter Spark Effect */
@@ -316,7 +346,7 @@ body {
   height: 20px;
   border: 3px solid #334155;
   border-radius: 50%;
-  border-top-color: #0ea5e9;
+  border-top-color: #22c55e;
   animation: spin 1s ease-in-out infinite;
 }
 
@@ -326,29 +356,45 @@ body {
   }
 }
 
-/* Glass morphism effect */
+/* Glass morphism effect with webkit fallback */
 .glass {
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .glass-dark {
   background: rgba(30, 41, 59, 0.8);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(100, 116, 139, 0.2);
 }
 
+/* Performance optimized animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
 /* Hover effects */
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5), 0 0 40px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
 
 .hover-spark:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(253, 224, 71, 0.6);
+  box-shadow: 0 0 30px rgba(132, 204, 22, 0.6);
   transition: all 0.3s ease;
 }
 

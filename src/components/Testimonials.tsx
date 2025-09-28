@@ -11,68 +11,68 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      location: "Key Largo, FL",
+      name: "Sarah Müller",
+      location: "Hamburg, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1494790108755-2616b612b93c?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "VoltCraft Pro transformed our entire home's electrical system. The smart home integration they installed is absolutely incredible - we can control everything from our phones!",
-      project: "Smart Home Renovation",
+      text: "PE Solutions hat unser gesamtes Elektrosystem modernisiert. Die Smart-Home-Integration ist unglaublich - wir können alles über unsere Smartphones steuern!",
+      project: "Smart Home Modernisierung",
       date: "2024",
     },
     {
       id: 2,
-      name: "Michael Rodriguez",
-      location: "Islamorada, FL",
+      name: "Michael Schmidt",
+      location: "Berlin, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "After Hurricane damage, VoltCraft Pro's emergency team restored our power in record time. Professional, efficient, and they went above and beyond our expectations.",
-      project: "Emergency Restoration",
+      text: "Nach einem Stromausfall hat das Notfallteam von PE Solutions unsere Stromversorgung in Rekordzeit wiederhergestellt. Professionell, effizient und über alle Erwartungen hinaus.",
+      project: "Notfall-Wiederherstellung",
       date: "2024",
     },
     {
       id: 3,
-      name: "Emily Chen",
-      location: "Key West, FL",
+      name: "Anna Weber",
+      location: "München, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "The LED lighting system they installed for our restaurant has dramatically reduced our energy costs while creating the perfect ambiance. Highly recommend!",
-      project: "Commercial LED Installation",
+      text: "Das LED-Beleuchtungssystem, das sie für unser Restaurant installiert haben, hat unsere Energiekosten drastisch reduziert und perfekte Atmosphäre geschaffen. Sehr empfehlenswert!",
+      project: "Gewerbliche LED-Installation",
       date: "2024",
     },
     {
       id: 4,
-      name: "David Thompson",
-      location: "Marathon, FL",
+      name: "Thomas Becker",
+      location: "Köln, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "VoltCraft Pro's attention to detail is unmatched. They rewired our historic home while preserving its character. True craftsmen who take pride in their work.",
-      project: "Historic Home Rewiring",
+      text: "Die Liebe zum Detail von PE Solutions ist unübertroffen. Sie haben unser historisches Haus neu verkabelt und dabei seinen Charakter bewahrt. Wahre Handwerker mit Stolz auf ihre Arbeit.",
+      project: "Historische Gebäude-Sanierung",
       date: "2024",
     },
     {
       id: 5,
-      name: "Lisa Martinez",
-      location: "Big Pine Key, FL",
+      name: "Lisa Hoffmann",
+      location: "Frankfurt, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "From consultation to completion, VoltCraft Pro exceeded every expectation. Their team is knowledgeable, punctual, and incredibly professional.",
-      project: "Residential Upgrade",
+      text: "Von der Beratung bis zur Fertigstellung hat PE Solutions alle Erwartungen übertroffen. Ihr Team ist kompetent, pünktlich und unglaublich professionell.",
+      project: "Wohnhaus-Modernisierung",
       date: "2024",
     },
     {
       id: 6,
-      name: "Robert Kim",
-      location: "Tavernier, FL",
+      name: "Robert Klein",
+      location: "Stuttgart, Deutschland",
       avatar:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
-      text: "The marina electrical installation was complex, but VoltCraft Pro handled it flawlessly. Weather-resistant, code-compliant, and built to last.",
-      project: "Marina Electrical System",
+      text: "Die Industrieanlage-Installation war komplex, aber PE Solutions hat sie perfekt gemeistert. Wetterfest, normenkonform und für die Ewigkeit gebaut.",
+      project: "Industrieanlage-Elektrik",
       date: "2024",
     },
   ];
@@ -101,7 +101,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-power-800 to-power-900 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -115,32 +115,32 @@ const Testimonials = () => {
             className="inline-flex items-center gap-2 bg-voltage-500/10 border border-voltage-500/30 rounded-full px-6 py-2 mb-6"
           >
             <Star className="w-5 h-5 text-voltage-400" />
-            <span className="text-voltage-300 font-rajdhani font-medium">
-              Client Reviews
+            <span className="text-voltage-300 font-pe-solutions-light font-medium">
+              Bewertungen
             </span>
           </motion.div>
 
           <motion.h2
             variants={cardVariants}
-            className="text-4xl md:text-6xl font-orbitron font-black mb-6"
+            className="text-4xl md:text-6xl font-pe-solutions font-black mb-6"
           >
             <span className="bg-gradient-to-r from-voltage-400 to-electric-400 bg-clip-text text-transparent">
-              What Our Clients
+              Was unsere Kunden
             </span>
             <br />
-            <span className="text-white">Say About Us</span>
+            <span className="text-white">über uns sagen</span>
           </motion.h2>
 
           <motion.p
             variants={cardVariants}
-            className="text-xl text-power-300 font-exo max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-power-300 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
-            Don't just take our word for it - hear from the{" "}
+            Vertrauen Sie nicht nur unserem Wort - hören Sie von{" "}
             <span className="text-electric-400 font-semibold">
-              satisfied customers
+              zufriedenen Kunden
             </span>{" "}
-            who have experienced our premium electrical services across the
-            Florida Keys.
+            die unsere erstklassigen Elektrotechnik-Dienstleistungen erfahren
+            haben.
           </motion.p>
         </motion.div>
 
@@ -177,12 +177,12 @@ const Testimonials = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-power-300 font-exo leading-relaxed mb-6 italic">
+              <p className="text-power-300 font-pe-solutions-light leading-relaxed mb-6 italic">
                 "{testimonial.text}"
               </p>
 
               {/* Project Badge */}
-              <div className="inline-flex items-center px-3 py-1 bg-electric-500/20 text-electric-400 rounded-full text-sm font-rajdhani font-medium mb-6">
+              <div className="inline-flex items-center px-3 py-1 bg-electric-500/20 text-electric-400 rounded-full text-sm font-pe-solutions-light font-medium mb-6">
                 {testimonial.project}
               </div>
 
@@ -198,7 +198,7 @@ const Testimonials = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-white font-orbitron font-bold">
+                  <h4 className="text-white font-pe-solutions font-bold">
                     {testimonial.name}
                   </h4>
                   <div className="flex items-center gap-1 text-power-400 text-sm">
@@ -207,7 +207,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="ml-auto text-power-500 text-sm font-rajdhani">
+                <div className="ml-auto text-power-500 text-sm font-pe-solutions-light">
                   {testimonial.date}
                 </div>
               </div>
@@ -229,28 +229,32 @@ const Testimonials = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           <div className="text-center">
-            <div className="text-4xl font-orbitron font-black text-voltage-400 mb-2">
+            <div className="text-4xl font-pe-solutions font-black text-voltage-400 mb-2">
               500+
             </div>
-            <div className="text-power-400 font-rajdhani">Happy Customers</div>
+            <div className="text-power-400 font-pe-solutions-light">
+              Zufriedene Kunden
+            </div>
           </div>
 
           <div className="text-center">
             <div className="flex items-center justify-center gap-1 mb-2">
-              <span className="text-4xl font-orbitron font-black text-voltage-400">
+              <span className="text-4xl font-pe-solutions font-black text-voltage-400">
                 5.0
               </span>
               <Star className="w-8 h-8 fill-voltage-400 text-voltage-400" />
             </div>
-            <div className="text-power-400 font-rajdhani">Average Rating</div>
+            <div className="text-power-400 font-pe-solutions-light">
+              Durchschnittliche Bewertung
+            </div>
           </div>
 
           <div className="text-center">
-            <div className="text-4xl font-orbitron font-black text-voltage-400 mb-2">
+            <div className="text-4xl font-pe-solutions font-black text-voltage-400 mb-2">
               100%
             </div>
-            <div className="text-power-400 font-rajdhani">
-              Customer Satisfaction
+            <div className="text-power-400 font-pe-solutions-light">
+              Kundenzufriedenheit
             </div>
           </div>
         </motion.div>
@@ -268,9 +272,9 @@ const Testimonials = () => {
               boxShadow: "0 0 40px rgba(253, 224, 71, 0.6)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-voltage-400 to-voltage-500 text-power-900 font-exo font-bold text-lg rounded-full transition-all duration-300 hover:from-voltage-300 hover:to-voltage-400"
+            className="px-8 py-4 bg-gradient-to-r from-voltage-400 to-voltage-500 text-power-900 font-pe-solutions font-bold text-lg rounded-full transition-all duration-300 hover:from-voltage-300 hover:to-voltage-400"
           >
-            Join Our Happy Customers
+            Werden Sie unser nächster zufriedener Kunde
           </motion.button>
         </motion.div>
       </div>

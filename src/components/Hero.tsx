@@ -42,7 +42,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-power-900 via-power-800 to-electric-900 pt-16 sm:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-grid-pattern" />
@@ -54,7 +54,7 @@ const Hero = () => {
           {sparkPositions.map((position, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-voltage-400 rounded-full"
+              className="absolute w-1 h-1 bg-accent-400 rounded-full"
               style={{
                 left: position.left,
                 top: position.top,
@@ -81,64 +81,64 @@ const Hero = () => {
           animate="visible"
           className="max-w-6xl mx-auto"
         >
-          {/* Emergency Badge */}
+          {/* Professional Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8 backdrop-blur-sm text-sm sm:text-base"
+            className="inline-flex items-center gap-2 bg-primary-600/20 border border-primary-500/30 rounded-full px-4 sm:px-6 py-2 mb-6 sm:mb-8 backdrop-blur-sm text-sm sm:text-base"
           >
-            <Zap className="w-4 h-4 text-red-400 animate-pulse" />
-            <span className="text-red-300 font-rajdhani font-medium">
-              24/7 Emergency Service Available
+            <Zap className="w-4 h-4 text-primary-400" />
+            <span className="text-primary-300 font-rajdhani font-medium">
+              Professionelle Elektrotechnik-Lösungen
             </span>
           </motion.div>
 
           {/* Clean & Professional Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black mb-6 leading-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-pe-solutions font-black mb-6 leading-tight"
           >
             <motion.span
-              className="bg-gradient-to-r from-electric-400 via-electric-300 to-voltage-400 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-primary-400 via-primary-300 to-accent-400 bg-clip-text text-transparent"
               whileHover={{
                 scale: 1.02,
-                textShadow: "0 0 20px rgba(14, 165, 233, 0.5)",
+                textShadow: "0 0 20px rgba(34, 197, 94, 0.5)",
               }}
               transition={{ duration: 0.3 }}
             >
-              VOLT
+              pe
             </motion.span>
+            <br />
             <motion.span
-              className="text-white ml-2"
+              className="text-white"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              CRAFT
+              solutions
             </motion.span>
-            <br />
             <motion.span
-              className="text-voltage-400"
+              className="text-accent-400 text-6xl md:text-8xl lg:text-9xl"
               whileHover={{
                 scale: 1.02,
-                textShadow: "0 0 20px rgba(252, 211, 77, 0.5)",
+                textShadow: "0 0 20px rgba(132, 204, 22, 0.5)",
               }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              PRO
+              .
             </motion.span>
           </motion.h1>
 
-          {/* Clean Subtitle */}
-          <motion.p
+          {/* Subtitle */}
+          <motion.div
             variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-power-300 font-exo font-light mb-8 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl lg:text-3xl text-secondary-300 font-pe-solutions-light mb-4 max-w-4xl mx-auto leading-relaxed"
           >
-            Premium Electrical Services in the{" "}
-            <span className="text-electric-400 font-medium">Florida Keys</span>
-            <br />
-            <span className="text-voltage-300">
-              Where Innovation Meets Excellence
-            </span>
-          </motion.p>
+            <div className="text-primary-400 font-medium mb-2">
+              Beratung | Planung | Ausführung
+            </div>
+            <div className="text-accent-300">
+              Elektrotechnik, die verbindet.
+            </div>
+          </motion.div>
 
           {/* Feature Pills */}
           <motion.div
@@ -146,32 +146,36 @@ const Hero = () => {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             {[
-              { icon: Shield, text: "Licensed & Insured", color: "electric" },
-              { icon: Award, text: "10+ Years Experience", color: "voltage" },
-              { icon: Clock, text: "Same Day Service", color: "electric" },
+              {
+                icon: Shield,
+                text: "Zertifiziert & Versichert",
+                color: "primary",
+              },
+              { icon: Award, text: "15+ Jahre Erfahrung", color: "accent" },
+              { icon: Clock, text: "Termintreue Garantie", color: "primary" },
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full border-2 backdrop-blur-sm transition-all duration-300 hover:scale-105 magnetic floating electric-card ${
-                  feature.color === "electric"
-                    ? "border-electric-500/30 bg-electric-500/10 hover:bg-electric-500/20 hover:shadow-glow-blue"
-                    : "border-voltage-500/30 bg-voltage-500/10 hover:bg-voltage-500/20 hover:shadow-glow-yellow"
+                className={`flex items-center gap-2 px-6 py-3 rounded-full border-2 backdrop-blur-sm transition-all duration-300 hover:scale-105 magnetic floating ${
+                  feature.color === "primary"
+                    ? "border-primary-500/30 bg-primary-500/10 hover:bg-primary-500/20 hover:shadow-glow-green"
+                    : "border-accent-500/30 bg-accent-500/10 hover:bg-accent-500/20 hover:shadow-glow-accent"
                 }`}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
                 <feature.icon
                   className={`w-5 h-5 ${
-                    feature.color === "electric"
-                      ? "text-electric-400 icon-electric"
-                      : "text-voltage-400 icon-voltage"
+                    feature.color === "primary"
+                      ? "text-primary-400"
+                      : "text-accent-400"
                   }`}
                 />
                 <span
                   className={`font-rajdhani font-medium text-glow-hover ${
-                    feature.color === "electric"
-                      ? "text-electric-100"
-                      : "text-voltage-100"
+                    feature.color === "primary"
+                      ? "text-primary-100"
+                      : "text-accent-100"
                   }`}
                 >
                   {feature.text}
@@ -186,43 +190,43 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-electric-500 to-electric-600 text-white font-rajdhani font-bold text-lg rounded-xl shadow-lg hover:shadow-electric-500/25 transition-all duration-300 voltage-button"
+              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-rajdhani font-bold text-lg rounded-xl shadow-lg hover:shadow-primary-600/20 transition-all duration-300"
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 10px 40px rgba(14, 165, 233, 0.3)",
+                boxShadow: "0 10px 40px rgba(22, 163, 74, 0.25)",
               }}
               whileTap={{ scale: 0.95 }}
             >
-              Get Free Quote
+              Kostenlose Beratung
             </motion.button>
 
             <motion.a
-              href="tel:+1234567890"
-              className="flex items-center gap-3 px-8 py-4 border-2 border-voltage-500 text-voltage-400 font-rajdhani font-bold text-lg rounded-xl hover:bg-voltage-500/10 transition-all duration-300 electric-button"
+              href="tel:+4915123456789"
+              className="flex items-center gap-3 px-8 py-4 border-2 border-accent-500 text-accent-400 font-rajdhani font-bold text-lg rounded-xl hover:bg-accent-500/10 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Phone className="w-5 h-5" />
-              Call Emergency: (555) 123-4567
+              Tel: +49 151 234 56789
             </motion.a>
           </motion.div>
 
           {/* Professional Trust Indicators */}
           <motion.div
             variants={itemVariants}
-            className="mt-16 flex flex-wrap justify-center items-center gap-8 text-power-400"
+            className="mt-16 flex flex-wrap justify-center items-center gap-8 text-secondary-400"
           >
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-electric-400" />
-              <span className="font-rajdhani">Fully Licensed</span>
+              <Shield className="w-5 h-5 text-primary-400" />
+              <span className="font-rajdhani">Vollständig Zertifiziert</span>
             </div>
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-voltage-400" />
-              <span className="font-rajdhani">A+ BBB Rating</span>
+              <Award className="w-5 h-5 text-accent-400" />
+              <span className="font-rajdhani">Qualitätsgarantie</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-electric-400" />
-              <span className="font-rajdhani">Master Electricians</span>
+              <Zap className="w-5 h-5 text-primary-400" />
+              <span className="font-rajdhani">Meisterqualität</span>
             </div>
           </motion.div>
         </motion.div>

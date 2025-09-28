@@ -1,19 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Award, Users, Zap, Shield } from "lucide-react";
+import { Clock, Sparkles, Zap } from "lucide-react";
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
-
-  const stats = [
-    { number: "10+", label: "Years Experience", icon: Award },
-    { number: "500+", label: "Happy Clients", icon: Users },
-    { number: "1000+", label: "Projects Completed", icon: Zap },
-    { number: "100%", label: "Licensed & Insured", icon: Shield },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -39,167 +32,126 @@ const About = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-power-900 to-power-800 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Animation Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10">
+          <Zap className="w-16 h-16 text-primary-400 animate-pulse" />
+        </div>
+        <div className="absolute bottom-20 right-10">
+          <Sparkles className="w-12 h-12 text-accent-400 animate-pulse" />
+        </div>
+        <div className="absolute top-1/2 left-1/4">
+          <div className="w-2 h-2 bg-primary-400 rounded-full animate-spark"></div>
+        </div>
+        <div className="absolute top-1/3 right-1/3">
+          <div className="w-1 h-1 bg-accent-400 rounded-full animate-spark [animation-delay:1s]"></div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* About Content */}
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="text-center max-w-4xl mx-auto"
+        >
+          {/* Section Badge */}
           <motion.div
-            ref={ref}
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-6 py-2 mb-8"
           >
-            <motion.div
-              variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/30 rounded-full px-6 py-2 mb-6"
-            >
-              <Award className="w-5 h-5 text-electric-400" />
-              <span className="text-electric-300 font-rajdhani font-medium">
-                About VoltCraft Pro
-              </span>
-            </motion.div>
-
-            <motion.h2
-              variants={itemVariants}
-              className="text-4xl md:text-6xl font-orbitron font-black mb-6 leading-tight"
-            >
-              <span className="bg-gradient-to-r from-electric-400 to-voltage-400 bg-clip-text text-transparent">
-                Powering the
-              </span>
-              <br />
-              <span className="text-white">Florida Keys</span>
-            </motion.h2>
-
-            <motion.p
-              variants={itemVariants}
-              className="text-xl text-power-300 font-exo mb-8 leading-relaxed"
-            >
-              For over a decade, VoltCraft Pro has been the{" "}
-              <span className="text-voltage-400 font-semibold">
-                premier electrical contractor
-              </span>{" "}
-              serving the Florida Keys. We combine traditional craftsmanship
-              with cutting-edge technology to deliver electrical solutions that
-              exceed expectations.
-            </motion.p>
-
-            <motion.div variants={itemVariants} className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="w-3 h-3 bg-electric-400 rounded-full mt-2"></div>
-                <div>
-                  <h3 className="text-white font-orbitron font-bold mb-2">
-                    Licensed & Certified
-                  </h3>
-                  <p className="text-power-300 font-exo">
-                    Fully licensed electrical contractors with all necessary
-                    certifications and insurance coverage.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-3 h-3 bg-voltage-400 rounded-full mt-2"></div>
-                <div>
-                  <h3 className="text-white font-orbitron font-bold mb-2">
-                    Local Expertise
-                  </h3>
-                  <p className="text-power-300 font-exo">
-                    Deep understanding of Florida Keys' unique electrical
-                    challenges and local building codes.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-3 h-3 bg-electric-400 rounded-full mt-2"></div>
-                <div>
-                  <h3 className="text-white font-orbitron font-bold mb-2">
-                    Innovation First
-                  </h3>
-                  <p className="text-power-300 font-exo">
-                    Embracing the latest electrical technologies and smart home
-                    innovations for modern living.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.button
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 40px rgba(14, 165, 233, 0.6)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-electric-400 to-electric-500 text-white font-exo font-bold text-lg rounded-full transition-all duration-300 hover:from-electric-300 hover:to-electric-400"
-            >
-              Learn More About Us
-            </motion.button>
+            <Clock className="w-5 h-5 text-primary-400" />
+            <span className="text-primary-300 font-pe-solutions-light font-medium">
+              Über uns
+            </span>
           </motion.div>
 
-          {/* Stats Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className="grid grid-cols-2 gap-6"
+          {/* Main Heading */}
+          <motion.h2
+            variants={itemVariants}
+            className="text-5xl md:text-7xl font-pe-solutions font-black mb-8 leading-tight"
           >
-            {stats.map((stat, index) => (
+            <span className="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+              Bald
+            </span>
+            <br />
+            <span className="text-white">verfügbar</span>
+          </motion.h2>
+
+          {/* Coming Soon Message */}
+          <motion.div variants={itemVariants} className="relative mb-12">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-accent-500/20 to-primary-500/20 rounded-3xl blur-xl"></div>
+            <div className="relative bg-secondary-800/50 border border-primary-500/30 rounded-3xl p-12 backdrop-blur-sm">
               <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow:
-                    index % 2 === 0
-                      ? "0 10px 30px rgba(14, 165, 233, 0.3)"
-                      : "0 10px 30px rgba(253, 224, 71, 0.3)",
+                animate={{
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 2, -2, 0],
                 }}
-                className={`relative group p-8 rounded-2xl border-2 backdrop-blur-sm transition-all duration-500 ${
-                  index % 2 === 0
-                    ? "border-electric-500/30 bg-electric-500/5 hover:bg-electric-500/10"
-                    : "border-voltage-500/30 bg-voltage-500/5 hover:bg-voltage-500/10"
-                }`}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="mb-6"
               >
-                {/* Icon */}
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 ${
-                    index % 2 === 0
-                      ? "bg-electric-500/20 group-hover:bg-electric-500/30"
-                      : "bg-voltage-500/20 group-hover:bg-voltage-500/30"
-                  }`}
-                >
-                  <stat.icon
-                    className={`w-6 h-6 ${
-                      index % 2 === 0 ? "text-electric-400" : "text-voltage-400"
-                    }`}
-                  />
-                </div>
-
-                {/* Number */}
-                <div
-                  className={`text-4xl font-orbitron font-black mb-2 ${
-                    index % 2 === 0 ? "text-electric-400" : "text-voltage-400"
-                  }`}
-                >
-                  {stat.number}
-                </div>
-
-                {/* Label */}
-                <div className="text-power-300 font-rajdhani font-medium">
-                  {stat.label}
-                </div>
-
-                {/* Glow Effect */}
-                <div
-                  className={`absolute -top-1 -right-1 w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse ${
-                    index % 2 === 0 ? "bg-electric-400" : "bg-voltage-400"
-                  }`}
-                ></div>
+                <Clock className="w-16 h-16 mx-auto text-accent-400" />
               </motion.div>
+
+              <h3 className="text-3xl md:text-4xl font-pe-solutions font-bold text-white mb-4">
+                In Bearbeitung
+              </h3>
+
+              <p className="text-xl text-secondary-300 font-pe-solutions-light leading-relaxed mb-6">
+                Diese Sektion wird gerade überarbeitet und mit
+                <span className="text-primary-400 font-semibold">
+                  {" "}
+                  interessanten Inhalten{" "}
+                </span>
+                über unser Unternehmen gefüllt.
+              </p>
+
+              <div className="flex items-center justify-center gap-2 text-accent-400">
+                <span className="text-lg font-pe-solutions-light">
+                  Kommt bald
+                </span>
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                >
+                  <Sparkles className="w-5 h-5" />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Progress Indicators */}
+          <motion.div
+            variants={itemVariants}
+            className="flex items-center justify-center gap-4"
+          >
+            {[...Array(5)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="w-3 h-3 rounded-full bg-primary-500/30"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  backgroundColor: [
+                    "rgba(34, 197, 94, 0.3)",
+                    "rgba(34, 197, 94, 0.8)",
+                    "rgba(34, 197, 94, 0.3)",
+                  ],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                }}
+              />
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -12,11 +12,11 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "residential", name: "Residential" },
-    { id: "commercial", name: "Commercial" },
-    { id: "emergency", name: "Emergency" },
-    { id: "smart", name: "Smart Homes" },
+    { id: "all", name: "Alle Projekte" },
+    { id: "residential", name: "Technischer Zeichner" },
+    { id: "commercial", name: "Örtliche Bauaufsicht" },
+    { id: "emergency", name: "Projektaufsicht" },
+    { id: "smart", name: "Energieberater" },
   ];
 
   const projects = [
@@ -164,46 +164,46 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-power-800 to-power-900 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <motion.div
             variants={cardVariants}
-            className="inline-flex items-center gap-2 bg-voltage-500/10 border border-voltage-500/30 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-accent-500/10 border border-accent-500/30 rounded-full px-4 py-1.5 mb-4"
           >
-            <Camera className="w-5 h-5 text-voltage-400" />
-            <span className="text-voltage-300 font-rajdhani font-medium">
-              Our Work
+            <Camera className="w-4 h-4 text-accent-400" />
+            <span className="text-accent-300 font-pe-solutions-light font-medium text-sm">
+              Unsere Referenzen
             </span>
           </motion.div>
 
           <motion.h2
             variants={cardVariants}
-            className="text-4xl md:text-6xl font-orbitron font-black mb-6"
+            className="text-3xl md:text-5xl font-pe-solutions font-black mb-4"
           >
-            <span className="bg-gradient-to-r from-voltage-400 to-electric-400 bg-clip-text text-transparent">
-              Portfolio of
+            <span className="bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">
+              Erfolgreiche
             </span>
             <br />
-            <span className="text-white">Excellence</span>
+            <span className="text-white">Projekte</span>
           </motion.h2>
 
           <motion.p
             variants={cardVariants}
-            className="text-xl text-power-300 font-exo max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-secondary-300 font-pe-solutions-light max-w-2xl mx-auto leading-relaxed"
           >
-            Discover our premium electrical projects across the Florida Keys.
-            <span className="text-electric-400 font-semibold">
+            Entdecken Sie unsere hochwertigen Elektrotechnik-Projekte.
+            <span className="text-primary-400 font-medium">
               {" "}
-              Every installation tells a story
+              Jedes Projekt erzählt eine Geschichte
             </span>{" "}
-            of innovation, quality, and customer satisfaction.
+            von Innovation und Qualität.
           </motion.p>
         </motion.div>
 
@@ -212,7 +212,7 @@ const Portfolio = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-3 mb-10"
         >
           {categories.map((category) => (
             <motion.button
@@ -221,10 +221,10 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-rajdhani font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full font-pe-solutions-light font-medium transition-all duration-300 text-sm ${
                 selectedCategory === category.id
-                  ? "bg-electric-500 text-power-900 shadow-glow-blue"
-                  : "bg-power-700/50 text-power-300 border border-power-600 hover:border-electric-500/50 hover:text-electric-300"
+                  ? "bg-primary-500 text-secondary-900 shadow-glow-green"
+                  : "bg-secondary-700/50 text-secondary-300 border border-secondary-600 hover:border-primary-500/50 hover:text-primary-300"
               }`}
             >
               {category.name}
@@ -237,125 +237,106 @@ const Portfolio = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
               whileHover={{
-                y: -10,
-                boxShadow: "0 20px 40px rgba(14, 165, 233, 0.2)",
+                y: -8,
+                boxShadow: "0 15px 30px rgba(14, 165, 233, 0.2)",
               }}
-              className="group relative bg-power-800/50 border border-power-700/50 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-500 hover:border-electric-500/30"
+              className="group relative bg-secondary-800/50 border border-secondary-700/50 rounded-xl overflow-hidden backdrop-blur-sm transition-all duration-500 hover:border-primary-500/30"
             >
               {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-power-900 via-transparent to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-transparent to-transparent opacity-80"></div>
 
                 {/* Value Badge */}
-                <div className="absolute top-4 right-4 bg-voltage-500/90 text-power-900 px-3 py-1 rounded-full font-exo font-bold text-sm">
+                <div className="absolute top-4 right-4 bg-accent-500/90 text-secondary-900 px-3 py-1 rounded-full font-pe-solutions font-bold text-sm">
                   {project.value}
                 </div>
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4 bg-electric-500/90 text-white px-3 py-1 rounded-full font-rajdhani font-medium text-sm capitalize">
+                <div className="absolute top-4 left-4 bg-primary-500/90 text-white px-3 py-1 rounded-full font-pe-solutions-light font-medium text-sm capitalize">
                   {project.category}
                 </div>
               </div>
 
               {/* Project Info */}
-              <div className="p-6">
+              <div className="p-4">
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-3">
+                <div className="flex items-center gap-1 mb-2">
                   {[...Array(project.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-4 h-4 fill-voltage-400 text-voltage-400"
+                      className="w-3 h-3 fill-accent-400 text-accent-400"
                     />
                   ))}
-                  <span className="text-power-400 text-sm font-rajdhani ml-2">
+                  <span className="text-secondary-400 text-xs font-pe-solutions-light ml-1">
                     Perfect Rating
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-orbitron font-bold text-white mb-2 group-hover:text-electric-300 transition-colors">
+                <h3 className="text-lg font-pe-solutions font-bold text-white mb-2 group-hover:text-primary-300 transition-colors">
                   {project.title}
                 </h3>
 
                 {/* Location & Date */}
-                <div className="flex items-center gap-4 mb-3 text-power-400 text-sm">
+                <div className="flex items-center gap-3 mb-2 text-secondary-400 text-xs font-pe-solutions-light">
                   <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
+                    <MapPin className="w-3 h-3" />
                     {project.location}
                   </div>
                   <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="w-3 h-3" />
                     {project.date}
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-power-300 font-exo mb-4 leading-relaxed">
+                <p className="text-secondary-300 font-pe-solutions-light mb-3 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
                 {/* Features */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.features.slice(0, 3).map((feature, idx) => (
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {project.features.slice(0, 2).map((feature, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-power-700/50 text-power-300 rounded-full text-xs font-rajdhani"
+                      className="px-2 py-1 bg-secondary-700/50 text-secondary-300 rounded-full text-xs font-pe-solutions-light"
                     >
                       {feature}
                     </span>
                   ))}
-                  {project.features.length > 3 && (
-                    <span className="px-3 py-1 bg-electric-500/20 text-electric-400 rounded-full text-xs font-rajdhani">
-                      +{project.features.length - 3} more
+                  {project.features.length > 2 && (
+                    <span className="px-2 py-1 bg-primary-500/20 text-primary-400 rounded-full text-xs font-pe-solutions-light">
+                      +{project.features.length - 2} more
                     </span>
                   )}
                 </div>
 
                 {/* View Details Button */}
                 <motion.button
-                  whileHover={{ x: 5 }}
-                  className="flex items-center gap-2 text-electric-400 font-exo font-medium group-hover:text-voltage-400 transition-colors"
+                  whileHover={{ x: 3 }}
+                  className="flex items-center gap-2 text-primary-400 font-pe-solutions-light font-medium group-hover:text-accent-400 transition-colors text-sm"
                 >
-                  View Details
-                  <ArrowRight className="w-4 h-4" />
+                  Details ansehen
+                  <ArrowRight className="w-3 h-3" />
                 </motion.button>
               </div>
 
               {/* Hover Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-electric-500/5 via-voltage-500/5 to-electric-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-accent-500/5 to-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl"></div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          variants={cardVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="text-center mt-16"
-        >
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 40px rgba(14, 165, 233, 0.6)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-electric-400 to-electric-500 text-white font-exo font-bold text-lg rounded-full transition-all duration-300 hover:from-electric-300 hover:to-electric-400"
-          >
-            Start Your Project Today
-          </motion.button>
         </motion.div>
       </div>
     </section>

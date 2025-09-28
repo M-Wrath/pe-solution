@@ -1,8 +1,8 @@
 {
-  "name": "voltcraft-pro",
+  "name": "pe-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium electrical services website with 3D animations and modern UI",
+  "description": "Professional electrical engineering services website with 3D animations and modern UI",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -52,12 +52,12 @@
   },
   "keywords": [
     "electrical",
-    "florida-keys",
-    "premium",
-    "3d-website",
+    "austria",
+    "professional",
+    "pe-solutions",
     "nextjs",
-    "professional"
+    "engineering"
   ],
-  "author": "VoltCraft Pro Development Team",
+  "author": "PE Solutions Development Team",
   "license": "MIT"
 }

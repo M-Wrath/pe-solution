@@ -36,65 +36,66 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Call Us",
-      details: ["(305) 555-VOLT", "24/7 Emergency Line"],
+      title: "Telefon",
+      details: ["+43 664 142 6563", "Geschäftszeiten"],
       color: "electric",
     },
     {
       icon: Mail,
-      title: "Email Us",
-      details: ["info@voltcraft-pro.com", "emergency@voltcraft-pro.com"],
+      title: "E-Mail",
+      details: ["office@pe-solutions.at", "Schnelle Antwortzeit"],
       color: "voltage",
     },
     {
       icon: MapPin,
-      title: "Visit Us",
-      details: ["123 Electrical Way", "Key Largo, FL 33037"],
+      title: "Adresse",
+      details: ["2604 Theresienfeld", "Bahnstraße 31"],
       color: "electric",
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      details: ["Mon-Fri: 7AM-6PM", "Emergency: 24/7"],
+      title: "Geschäftszeiten",
+      details: ["Mo-Fr: 8:00-17:00", "Termine nach Vereinbarung"],
       color: "voltage",
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-power-900 to-power-800 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/30 rounded-full px-6 py-2 mb-6">
             <Send className="w-5 h-5 text-electric-400" />
-            <span className="text-electric-300 font-rajdhani font-medium">
-              Get In Touch
+            <span className="text-electric-300 font-pe-solutions-light font-medium">
+              Kontakt aufnehmen
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-orbitron font-black mb-6">
+          <h2 className="text-3xl md:text-5xl font-pe-solutions font-black mb-4">
             <span className="bg-gradient-to-r from-electric-400 to-voltage-400 bg-clip-text text-transparent">
-              Ready to Power
+              Bereit für Ihr
             </span>
             <br />
-            <span className="text-white">Your Project?</span>
+            <span className="text-white">Projekt?</span>
           </h2>
 
-          <p className="text-xl text-power-300 font-exo max-w-3xl mx-auto leading-relaxed">
-            Contact VoltCraft Pro today for a{" "}
+          <p className="text-lg text-power-300 font-pe-solutions-light max-w-2xl mx-auto leading-relaxed">
+            Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-voltage-400 font-semibold">
-              free consultation
+              kostenlose Beratung
             </span>{" "}
-            and discover how we can transform your electrical systems.
+            und erfahren Sie, wie wir Ihre Elektrotechnik-Projekte realisieren
+            können.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -105,30 +106,30 @@ const Contact = () => {
             {/* Glowing border effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-electric-400/20 via-voltage-400/20 to-electric-400/20 rounded-2xl blur-xl opacity-50"></div>
 
-            <div className="relative bg-gradient-to-br from-power-800/60 to-power-900/60 border border-electric-500/30 rounded-2xl p-8 backdrop-blur-md shadow-2xl">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/30 rounded-full px-4 py-2 mb-4">
+            <div className="relative bg-gradient-to-br from-power-800/60 to-power-900/60 border border-electric-500/30 rounded-2xl p-6 backdrop-blur-md shadow-2xl">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center gap-2 bg-electric-500/10 border border-electric-500/30 rounded-full px-4 py-2 mb-3">
                   <Send className="w-4 h-4 text-electric-400" />
-                  <span className="text-electric-300 font-rajdhani font-medium text-sm">
-                    Contact Form
+                  <span className="text-electric-300 font-pe-solutions-light font-medium text-sm">
+                    Kontaktformular
                   </span>
                 </div>
-                <h3 className="text-2xl font-orbitron font-black text-white mb-2">
-                  Let's Get{" "}
+                <h3 className="text-xl font-pe-solutions font-black text-white mb-2">
+                  Lassen Sie uns{" "}
                   <span className="bg-gradient-to-r from-electric-400 to-voltage-400 bg-clip-text text-transparent">
-                    Connected
+                    sprechen
                   </span>
                 </h3>
-                <p className="text-power-300 font-exo text-sm">
-                  Tell us about your electrical project
+                <p className="text-power-300 font-pe-solutions-light text-sm">
+                  Erzählen Sie uns von Ihrem Elektrotechnik-Projekt
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-power-200 font-rajdhani font-semibold mb-3 text-sm uppercase tracking-wide">
-                      Full Name *
+                    <label className="block text-power-200 font-pe-solutions font-semibold mb-3 text-sm uppercase tracking-wide">
+                      Vollständiger Name *
                     </label>
                     <div className="relative">
                       <input
@@ -137,16 +138,16 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-exo group-hover:border-power-500/70"
-                        placeholder="Your full name"
+                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-pe-solutions-light group-hover:border-power-500/70"
+                        placeholder="Ihr vollständiger Name"
                       />
                       <div className="absolute inset-0 rounded-xl bg-electric-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </div>
 
                   <div className="group">
-                    <label className="block text-power-200 font-rajdhani font-semibold mb-3 text-sm uppercase tracking-wide">
-                      Email Address *
+                    <label className="block text-power-200 font-pe-solutions font-semibold mb-3 text-sm uppercase tracking-wide">
+                      E-Mail-Adresse *
                     </label>
                     <div className="relative">
                       <input
@@ -155,18 +156,18 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-exo group-hover:border-power-500/70"
-                        placeholder="your@email.com"
+                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-pe-solutions-light group-hover:border-power-500/70"
+                        placeholder="ihre@email.at"
                       />
                       <div className="absolute inset-0 rounded-xl bg-electric-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-power-200 font-rajdhani font-semibold mb-3 text-sm uppercase tracking-wide">
-                      Phone Number
+                    <label className="block text-power-200 font-pe-solutions font-semibold mb-3 text-sm uppercase tracking-wide">
+                      Telefonnummer
                     </label>
                     <div className="relative">
                       <input
@@ -174,48 +175,60 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-exo group-hover:border-power-500/70"
-                        placeholder="(305) 555-0123"
+                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-pe-solutions-light group-hover:border-power-500/70"
+                        placeholder="+43 664 123 4567"
                       />
                       <div className="absolute inset-0 rounded-xl bg-electric-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </div>
 
                   <div className="group">
-                    <label className="block text-power-200 font-rajdhani font-semibold mb-3 text-sm uppercase tracking-wide">
-                      Service Needed
+                    <label className="block text-power-200 font-pe-solutions font-semibold mb-3 text-sm uppercase tracking-wide">
+                      Benötigter Service
                     </label>
                     <div className="relative">
                       <select
-                        title="Select a service"
+                        title="Service auswählen"
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-exo appearance-none cursor-pointer group-hover:border-power-500/70"
+                        className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-pe-solutions-light appearance-none cursor-pointer group-hover:border-power-500/70"
                       >
                         <option value="" className="bg-power-800">
-                          Select a service
+                          Service auswählen
                         </option>
-                        <option value="residential" className="bg-power-800">
-                          Residential Electrical
+                        <option
+                          value="technical-drawing"
+                          className="bg-power-800"
+                        >
+                          Technischer Zeichner
                         </option>
-                        <option value="commercial" className="bg-power-800">
-                          Commercial Electrical
+                        <option
+                          value="construction-supervision"
+                          className="bg-power-800"
+                        >
+                          Örtliche Bauaufsicht
                         </option>
-                        <option value="emergency" className="bg-power-800">
-                          Emergency Service
+                        <option
+                          value="project-management"
+                          className="bg-power-800"
+                        >
+                          Projektaufsicht
                         </option>
-                        <option value="smart-home" className="bg-power-800">
-                          Smart Home Installation
+                        <option
+                          value="energy-consulting"
+                          className="bg-power-800"
+                        >
+                          Energieberater
                         </option>
-                        <option value="led-lighting" className="bg-power-800">
-                          LED Lighting
+                        <option value="planning" className="bg-power-800">
+                          Elektrotechnik-Planung
                         </option>
-                        <option value="inspection" className="bg-power-800">
-                          Safety Inspection
+                        <option value="consulting" className="bg-power-800">
+                          Beratung
                         </option>
                         <option value="other" className="bg-power-800">
-                          Other
+                          Sonstiges
                         </option>
                       </select>
                       <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
@@ -239,8 +252,8 @@ const Contact = () => {
                 </div>
 
                 <div className="group">
-                  <label className="block text-power-200 font-rajdhani font-semibold mb-3 text-sm uppercase tracking-wide">
-                    Project Details
+                  <label className="block text-power-200 font-pe-solutions font-semibold mb-3 text-sm uppercase tracking-wide">
+                    Projekt Details
                   </label>
                   <div className="relative">
                     <textarea
@@ -248,8 +261,8 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-exo resize-none group-hover:border-power-500/70"
-                      placeholder="Tell us about your electrical project, timeline, and any specific requirements..."
+                      className="w-full px-4 py-4 bg-power-700/30 border-2 border-power-600/50 rounded-xl text-white placeholder-power-400 focus:border-electric-500 focus:bg-power-700/50 focus:outline-none transition-all duration-300 font-pe-solutions-light resize-none group-hover:border-power-500/70"
+                      placeholder="Erzählen Sie uns von Ihrem Elektrotechnik-Projekt, Zeitrahmen und spezifischen Anforderungen..."
                     ></textarea>
                     <div className="absolute inset-0 rounded-xl bg-electric-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
@@ -267,12 +280,12 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="emergency"
-                      className="text-red-300 font-exo font-medium cursor-pointer"
+                      className="text-red-300 font-pe-solutions-light font-medium cursor-pointer"
                     >
-                      🚨 Emergency Service Required
+                      🚨 Dringende Anfrage
                     </label>
-                    <p className="text-red-400/80 text-sm font-exo mt-1">
-                      Check for immediate priority response (24/7)
+                    <p className="text-red-400/80 text-sm font-pe-solutions-light mt-1">
+                      Ankreuzen für schnelle Prioritätsbearbeitung
                     </p>
                   </div>
                 </div>
@@ -287,26 +300,26 @@ const Contact = () => {
                       ? "bg-green-600 text-white shadow-green-500/25"
                       : formData.emergency
                       ? "bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-500 hover:to-red-600 shadow-red-500/25"
-                      : "bg-gradient-to-r from-electric-400 to-electric-500 text-white hover:from-electric-300 hover:to-electric-400 shadow-electric-500/25"
+                      : "bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-500 hover:to-primary-600 shadow-primary-600/20"
                   }`}
                 >
                   {/* Button glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
 
-                  <span className="relative z-10">
+                  <span className="relative z-10 font-pe-solutions">
                     {isSubmitted ? (
                       <div className="flex items-center justify-center gap-2">
                         <CheckCircle className="w-5 h-5" />
-                        Message Sent Successfully!
+                        Nachricht erfolgreich gesendet!
                       </div>
                     ) : formData.emergency ? (
                       <div className="flex items-center justify-center gap-2">
-                        <span>🚨 Send Emergency Request</span>
+                        <span>🚨 Dringende Anfrage senden</span>
                       </div>
                     ) : (
                       <div className="flex items-center justify-center gap-2">
                         <Send className="w-5 h-5" />
-                        <span>Send Message</span>
+                        <span>Nachricht senden</span>
                       </div>
                     )}
                   </span>
@@ -316,15 +329,21 @@ const Contact = () => {
                 <div className="flex items-center justify-center gap-6 pt-4 border-t border-power-600/30">
                   <div className="flex items-center gap-2 text-power-300">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-xs font-exo">Free Consultation</span>
+                    <span className="text-xs font-pe-solutions-light">
+                      Kostenlose Beratung
+                    </span>
                   </div>
                   <div className="flex items-center gap-2 text-power-300">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-xs font-exo">24/7 Emergency</span>
+                    <span className="text-xs font-pe-solutions-light">
+                      Schnelle Antwort
+                    </span>
                   </div>
                   <div className="flex items-center gap-2 text-power-300">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-xs font-exo">Licensed & Insured</span>
+                    <span className="text-xs font-pe-solutions-light">
+                      Zertifiziert & Versichert
+                    </span>
                   </div>
                 </div>
               </form>
@@ -336,10 +355,10 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             {/* Contact Info Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
@@ -347,7 +366,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  className={`p-6 rounded-xl border-2 backdrop-blur-sm transition-all duration-300 ${
+                  className={`p-4 rounded-xl border-2 backdrop-blur-sm transition-all duration-300 ${
                     info.color === "electric"
                       ? "border-electric-500/30 bg-electric-500/5 hover:bg-electric-500/10 hover:border-electric-500/50"
                       : "border-voltage-500/30 bg-voltage-500/5 hover:bg-voltage-500/10 hover:border-voltage-500/50"
@@ -371,13 +390,13 @@ const Contact = () => {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base font-orbitron font-bold text-white mb-2">
+                      <h3 className="text-base font-pe-solutions font-bold text-white mb-2">
                         {info.title}
                       </h3>
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-power-300 font-exo text-sm leading-relaxed"
+                          className="text-power-300 font-pe-solutions-light text-sm leading-relaxed"
                         >
                           {detail}
                         </p>
@@ -388,46 +407,114 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Location Map */}
+            {/* Company Information */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-power-800/40 to-power-900/40 border border-electric-500/20 rounded-2xl p-6 backdrop-blur-sm hover:border-electric-500/40 transition-all duration-500"
+              className="bg-gradient-to-br from-power-800/40 to-power-900/40 border border-electric-500/20 rounded-2xl p-8 backdrop-blur-sm hover:border-electric-500/40 transition-all duration-500"
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-electric-400" />
-                  <h3 className="text-white font-orbitron font-bold text-lg">
-                    Find Us
-                  </h3>
+              <div className="flex items-center gap-3 mb-6">
+                <MapPin className="w-5 h-5 text-electric-400" />
+                <h3 className="text-white font-pe-solutions font-bold text-lg">
+                  Unternehmensinformationen
+                </h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-electric-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-electric-300 font-pe-solutions font-semibold text-sm mb-1">
+                      Firmenwortlaut
+                    </h4>
+                    <p className="text-white font-pe-solutions-light text-lg">
+                      PE Solutions e.U.
+                    </p>
+                  </div>
                 </div>
-                <a
-                  href="https://maps.google.com/?q=Key+Largo,+FL+33037"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-electric-400 hover:text-electric-300 font-exo text-sm underline transition-colors"
-                >
-                  Open in Maps
-                </a>
-              </div>
 
-              <div className="relative h-48 rounded-xl overflow-hidden bg-power-900">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57834.79934833219!2d-80.4494!3d25.0854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d0c096947f71c1%3A0x5b85b3e6b9b4a6a1!2sKey%20Largo%2C%20FL%2033037!5e0!3m2!1sen!2sus!4v1672345567890!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  allowFullScreen={true}
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="VoltCraft Pro Location - Key Largo, FL"
-                  className="border-0"
-                />
-              </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-voltage-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-voltage-300 font-pe-solutions font-semibold text-sm mb-1">
+                      Adresse
+                    </h4>
+                    <p className="text-white font-pe-solutions-light">
+                      2604 Theresienfeld, Bahnstraße 31
+                    </p>
+                  </div>
+                </div>
 
-              <div className="mt-4 text-center">
-                <p className="text-power-300 font-exo text-sm">
-                  123 Electrical Way, Key Largo, FL 33037
-                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-electric-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-electric-300 font-pe-solutions font-semibold text-sm mb-1">
+                        Telefon
+                      </h4>
+                      <a
+                        href="tel:+436641426563"
+                        className="text-white font-pe-solutions-light hover:text-electric-300 transition-colors cursor-pointer"
+                      >
+                        +43 664 142 6563
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-voltage-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-voltage-300 font-pe-solutions font-semibold text-sm mb-1">
+                        E-Mail
+                      </h4>
+                      <a
+                        href="mailto:office@pe-solutions.at"
+                        className="text-white font-pe-solutions-light hover:text-voltage-300 transition-colors cursor-pointer"
+                      >
+                        office@pe-solutions.at
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-electric-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-electric-300 font-pe-solutions font-semibold text-sm mb-1">
+                      Geschäftsführer
+                    </h4>
+                    <p className="text-white font-pe-solutions-light">
+                      Ing. Mijo Petrovic
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-power-600/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-voltage-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-voltage-300 font-pe-solutions font-semibold text-sm mb-1">
+                        UID
+                      </h4>
+                      <p className="text-power-300 font-pe-solutions-light text-sm">
+                        ATU78204006
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-electric-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-electric-300 font-pe-solutions font-semibold text-sm mb-1">
+                        Firmenbuchnummer
+                      </h4>
+                      <p className="text-power-300 font-pe-solutions-light text-sm">
+                        582554y
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>
