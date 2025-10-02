@@ -1,36 +1,6 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Clock, Sparkles, Zap } from "lucide-react";
+import { Clock } from "lucide-react";
 
 const About = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <section className="py-20 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
