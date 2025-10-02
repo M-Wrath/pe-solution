@@ -74,13 +74,13 @@ const Partners = () => {
   };
 
   const cardVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   };
@@ -132,17 +132,17 @@ const Partners = () => {
           className="relative"
         >
           {/* Main logo container */}
-          <div className="relative bg-white border-2 border-gray-200 rounded-xl p-8 sm:p-10 shadow-sm hover:border-green-600 hover:shadow-lg transition-all duration-300">
+          <div className="relative bg-white border-2 border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:border-green-600 hover:shadow-lg transition-all duration-300">
             {/* Logo grid - clean and spacious */}
-            <div className="relative z-10 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10 items-center justify-items-center">
+            <div className="relative z-10 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center">
               {partners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
                   variants={cardVariants}
                   className={`flex items-center justify-center ${
                     partner.name === "pe solutions"
-                      ? "w-full h-32"
-                      : "w-full h-28"
+                      ? "w-full h-24"
+                      : "w-full h-20"
                   }`}
                 >
                   <img
@@ -150,8 +150,8 @@ const Partners = () => {
                     alt={partner.name}
                     className={`object-contain ${
                       partner.name === "pe solutions"
-                        ? "max-w-32 max-h-32"
-                        : "max-w-full max-h-24"
+                        ? "max-w-24 max-h-24"
+                        : "max-w-full max-h-20"
                     }`}
                     onError={(e) => {
                       const img = e.target as HTMLImageElement;
