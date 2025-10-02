@@ -8,6 +8,8 @@ import {
   Lightbulb,
   Wrench,
   Battery,
+  LayoutGrid,
+  MessageCircle,
 } from "lucide-react";
 
 const Services = () => {
@@ -26,7 +28,7 @@ const Services = () => {
         "CAD-Zeichnungen",
         "Schaltpläne",
         "Anlagenpläne",
-        "3D-Visualisierungen",
+        "Dokumentation",
       ],
       color: "primary",
       price: "Auf Anfrage",
@@ -61,7 +63,7 @@ const Services = () => {
     },
     {
       icon: Lightbulb,
-      title: "Energieberater",
+      title: "Energieberatung",
       description:
         "Beratung zur Energieeffizienz und nachhaltigen Elektrotechnik-Lösungen",
       features: [
@@ -69,6 +71,33 @@ const Services = () => {
         "Effizienzoptimierung",
         "Fördermittelberatung",
         "Nachhaltigkeitskonzepte",
+      ],
+      color: "accent",
+      price: "Auf Anfrage",
+    },
+    {
+      icon: LayoutGrid,
+      title: "Elektrotechnik-Planung",
+      description: "Umfassende Planung elektrotechnischer Anlagen und Systeme",
+      features: [
+        "Konzepterstellung",
+        "Systemplanung",
+        "Lastberechnung",
+        "Normenkonformität",
+      ],
+      color: "primary",
+      price: "Auf Anfrage",
+    },
+    {
+      icon: MessageCircle,
+      title: "Beratung",
+      description:
+        "Professionelle Beratung für alle elektrotechnischen Fragestellungen",
+      features: [
+        "Erstberatung",
+        "Lösungskonzepte",
+        "Kostenplanung",
+        "Technische Empfehlungen",
       ],
       color: "accent",
       price: "Auf Anfrage",
@@ -99,17 +128,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-16 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10">
-          <Zap className="w-24 h-24 text-primary-400 animate-pulse" />
-        </div>
-        <div className="absolute bottom-10 right-10">
-          <Battery className="w-20 h-20 text-accent-400 animate-pulse" />
-        </div>
-      </div>
-
+    <section className="py-16 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -120,35 +139,36 @@ const Services = () => {
         >
           <motion.div
             variants={cardVariants}
-            className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-4 py-1.5 mb-4"
+            className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4"
           >
-            <Wrench className="w-4 h-4 text-primary-400" />
-            <span className="text-primary-300 font-pe-solutions-light font-medium text-sm">
+            <Wrench className="w-4 h-4 text-green-600" />
+            <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
               Unsere Dienstleistungen
             </span>
           </motion.div>
 
           <motion.h2
             variants={cardVariants}
-            className="text-3xl md:text-5xl font-pe-solutions font-black mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-pe-solutions font-black mb-6 text-black leading-tight"
           >
-            <span className="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
-              Professionelle Elektrotechnik
-            </span>
-            <br />
-            <span className="text-white">Lösungen</span>
+            Professionelle{" "}
+            <span className="text-green-600">Elektrotechnik</span> Lösungen
           </motion.h2>
 
           <motion.p
             variants={cardVariants}
-            className="text-lg text-secondary-300 font-pe-solutions-light max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-gray-600 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
-            Von der Planung bis zur Ausführung bieten wir
-            <span className="text-accent-400 font-semibold">
-              {" "}
+            <span className="text-black font-medium">
+              Von der Planung bis zur Ausführung
+            </span>{" "}
+            bieten wir{" "}
+            <span className="text-green-600 font-semibold">
               erstklassige elektrotechnische Dienstleistungen
             </span>{" "}
-            mit modernster Technologie und unvergleichlicher Expertise.
+            mit <span className="text-gray-700">modernster Technologie</span>{" "}
+            und{" "}
+            <span className="text-gray-700">unvergleichlicher Expertise</span>.
           </motion.p>
         </motion.div>
 
@@ -156,55 +176,39 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
               whileHover={{
-                scale: 1.05,
-                y: -8,
+                y: -4,
               }}
-              className={`relative group text-center transition-all duration-300 cursor-pointer bg-secondary-800/30 border border-secondary-700/50 rounded-xl p-4 hover:border-primary-500/50 backdrop-blur-sm`}
+              transition={{ duration: 0.2 }}
+              className="relative group text-center transition-all duration-200 bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-green-600 hover:shadow-xl"
             >
               {/* Service Icon */}
-              <div
-                className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 ${
-                  service.color === "primary"
-                    ? "bg-primary-500/20 group-hover:bg-primary-500/30 border border-primary-500/30"
-                    : "bg-accent-500/20 group-hover:bg-accent-500/30 border border-accent-500/30"
-                }`}
-              >
-                <service.icon
-                  className={`w-8 h-8 ${
-                    service.color === "primary"
-                      ? "text-primary-400"
-                      : "text-accent-400"
-                  }`}
-                />
+              <div className="w-14 h-14 mx-auto rounded-lg flex items-center justify-center mb-5 transition-all duration-200 bg-gray-100 border border-gray-300 group-hover:bg-green-50 group-hover:border-green-600">
+                <service.icon className="w-7 h-7 text-gray-700 group-hover:text-green-600 transition-colors duration-200" />
               </div>
 
               {/* Service Title */}
-              <h3 className="text-lg font-pe-solutions font-bold text-white mb-3 group-hover:text-primary-300 transition-colors">
+              <h3 className="text-lg font-pe-solutions font-bold text-black mb-3 group-hover:text-green-600 transition-colors duration-200">
                 {service.title}
               </h3>
 
               {/* Service Description */}
-              <p className="text-secondary-400 font-pe-solutions-light mb-4 text-sm leading-relaxed">
+              <p className="text-gray-600 font-pe-solutions-light mb-5 text-sm leading-relaxed">
                 {service.description}
               </p>
 
               {/* Feature List - Horizontal Pills */}
-              <div className="flex flex-wrap justify-center gap-1 mb-4">
+              <div className="flex flex-wrap justify-center gap-2 mb-5">
                 {service.features.map((feature, idx) => (
                   <span
                     key={idx}
-                    className={`px-2 py-1 rounded-md text-xs font-pe-solutions-light transition-all duration-300 ${
-                      service.color === "primary"
-                        ? "bg-primary-500/10 text-primary-300 group-hover:bg-primary-500/20"
-                        : "bg-accent-500/10 text-accent-300 group-hover:bg-accent-500/20"
-                    }`}
+                    className="px-3 py-1.5 rounded-lg text-xs font-pe-solutions-light bg-gray-100 text-gray-700 border border-gray-200 group-hover:border-green-200 group-hover:bg-green-50 group-hover:text-green-700 transition-all duration-200"
                   >
                     {feature}
                   </span>
@@ -212,13 +216,7 @@ const Services = () => {
               </div>
 
               {/* Price Badge */}
-              <div
-                className={`inline-flex items-center px-3 py-1 rounded-full font-pe-solutions-light font-semibold text-xs transition-all duration-300 ${
-                  service.color === "primary"
-                    ? "bg-primary-500/20 text-primary-300 group-hover:bg-primary-500/30"
-                    : "bg-accent-500/20 text-accent-300 group-hover:bg-accent-500/30"
-                }`}
-              >
+              <div className="inline-flex items-center px-4 py-2 rounded-lg font-pe-solutions-light font-semibold text-xs bg-gray-100 text-gray-700 border border-gray-300 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-200">
                 {service.price}
               </div>
             </motion.div>
@@ -233,12 +231,16 @@ const Services = () => {
           className="text-center mt-12"
         >
           <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 40px rgba(132, 204, 22, 0.6)",
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
             }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-gradient-to-r from-accent-400 to-accent-500 text-secondary-900 font-pe-solutions font-bold text-base rounded-full transition-all duration-300 hover:from-accent-300 hover:to-accent-400"
+            whileHover={{
+              y: -1,
+            }}
+            whileTap={{ scale: 0.98 }}
+            className="px-6 py-3 bg-green-600 text-white font-pe-solutions-light font-semibold text-sm rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-sm hover:shadow-md"
           >
             Kostenlose Beratung vereinbaren
           </motion.button>

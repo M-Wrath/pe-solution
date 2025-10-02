@@ -86,7 +86,7 @@ const Partners = () => {
   };
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -97,28 +97,30 @@ const Partners = () => {
         >
           <motion.div
             variants={cardVariants}
-            className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-4 py-1.5 mb-4"
+            className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4"
           >
-            <Handshake className="w-4 h-4 text-primary-400" />
-            <span className="text-primary-300 font-pe-solutions-light font-medium text-sm">
+            <Handshake className="w-4 h-4 text-green-600" />
+            <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
               Partnerfirmen
             </span>
           </motion.div>
 
           <motion.h2
             variants={cardVariants}
-            className="text-3xl md:text-5xl font-pe-solutions font-black mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-pe-solutions font-black mb-6 text-black leading-tight"
           >
-            <span className="text-white">Unsere Kunden</span>
-            <span className="text-primary-400"> & </span>
-            <span className="text-accent-400">Partner</span>
+            Unsere Kunden & <span className="text-green-600">Partner</span>
           </motion.h2>
 
           <motion.p
             variants={cardVariants}
-            className="text-lg text-secondary-300 font-pe-solutions-light max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-gray-600 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
-            Wir betreuen Kunden in Österreich und darüber hinaus
+            Wir betreuen{" "}
+            <span className="text-green-600 font-semibold">
+              Kunden in Österreich
+            </span>{" "}
+            und darüber hinaus
           </motion.p>
         </motion.div>
 
@@ -130,18 +132,14 @@ const Partners = () => {
           className="relative"
         >
           {/* Main logo container */}
-          <div className="relative bg-secondary-800/90 border border-secondary-700/50 rounded-2xl p-8 shadow-2xl">
+          <div className="relative bg-white border-2 border-gray-200 rounded-xl p-8 sm:p-10 shadow-sm hover:border-green-600 hover:shadow-lg transition-all duration-300">
             {/* Logo grid - clean and spacious */}
-            <div className="relative z-10 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center justify-items-center">
+            <div className="relative z-10 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10 items-center justify-items-center">
               {partners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
                   variants={cardVariants}
-                  whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.3, ease: "easeOut" },
-                  }}
-                  className={`group flex items-center justify-center transition-all duration-500 ease-out ${
+                  className={`flex items-center justify-center ${
                     partner.name === "pe solutions"
                       ? "w-full h-32"
                       : "w-full h-28"
@@ -150,14 +148,14 @@ const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className={`object-contain filter brightness-75 grayscale opacity-70 group-hover:brightness-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out ${
+                    className={`object-contain ${
                       partner.name === "pe solutions"
                         ? "max-w-32 max-h-32"
                         : "max-w-full max-h-24"
                     }`}
                     onError={(e) => {
                       const img = e.target as HTMLImageElement;
-                      img.src = `https://via.placeholder.com/120x48/374151/9CA3AF?text=${partner.name.replace(
+                      img.src = `https://via.placeholder.com/120x48/e5e7eb/6b7280?text=${partner.name.replace(
                         /\s+/g,
                         "+"
                       )}`;
@@ -171,9 +169,12 @@ const Partners = () => {
           {/* Subtle bottom text */}
           <motion.p
             variants={cardVariants}
-            className="text-center mt-6 text-sm text-secondary-500 font-pe-solutions-light"
+            className="text-center mt-6 text-sm text-gray-600 font-pe-solutions-light"
           >
-            Vertrauen Sie auf unsere bewährten Partnerschaften
+            Vertrauen Sie auf unsere{" "}
+            <span className="text-green-600 font-medium">
+              bewährten Partnerschaften
+            </span>
           </motion.p>
         </motion.div>
       </div>

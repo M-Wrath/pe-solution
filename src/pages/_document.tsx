@@ -65,7 +65,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-power-900 text-white antialiased">
+      <body className="bg-white text-gray-900 antialiased">
         <Main />
         <NextScript />
       </body>
