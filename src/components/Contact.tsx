@@ -81,7 +81,7 @@ const Contact = () => {
             Bereit für Ihr <span className="text-green-600">Projekt</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-800 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
             Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-green-600 font-semibold">
               kostenlose Beratung
@@ -135,7 +135,7 @@ const Contact = () => {
                   </div>
 
                   <div className="group">
-                    <label className="block text-gray-700 font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
                       E-Mail-Adresse *
                     </label>
                     <div className="relative">
@@ -154,7 +154,7 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-gray-700 font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
                       Telefonnummer
                     </label>
                     <div className="relative">
@@ -170,7 +170,7 @@ const Contact = () => {
                   </div>
 
                   <div className="group">
-                    <label className="block text-gray-700 font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
                       Benötigter Service
                     </label>
                     <div className="relative">
@@ -229,7 +229,7 @@ const Contact = () => {
                 </div>
 
                 <div className="group">
-                  <label className="block text-gray-700 font-pe-solutions-light font-medium mb-2 text-sm">
+                  <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
                     Projekt Details
                   </label>
                   <div className="relative">
@@ -256,11 +256,11 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="emergency"
-                      className="text-gray-700 font-pe-solutions-light font-medium cursor-pointer"
+                      className="text-black font-pe-solutions-light font-medium cursor-pointer"
                     >
                       🚨 Dringende Anfrage
                     </label>
-                    <p className="text-gray-700 text-sm font-pe-solutions-light mt-1">
+                    <p className="text-black text-sm font-pe-solutions-light mt-1">
                       Ankreuzen für schnelle Prioritätsbearbeitung
                     </p>
                   </div>
@@ -300,19 +300,19 @@ const Contact = () => {
 
                 {/* Trust indicators */}
                 <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-200">
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Kostenlose Beratung
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Schnelle Antwort
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Zertifiziert & Versichert
@@ -353,7 +353,7 @@ const Contact = () => {
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-gray-700 font-pe-solutions-light text-sm leading-relaxed"
+                          className="text-black font-pe-solutions-light text-sm leading-relaxed"
                         >
                           {detail}
                         </p>
@@ -390,25 +390,25 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Ing. Mijo Petrovic
                     </h4>
-                    <p className="text-gray-700 font-pe-solutions-light text-sm">
+                    <p className="text-black font-pe-solutions-light text-sm">
                       Geschäftsführer
                     </p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
-                      <Phone className="w-4 h-4 text-gray-700 flex-shrink-0" />
+                      <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+436641426563"
-                        className="text-black font-pe-solutions-light hover:text-gray-700 transition-colors"
+                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
                       >
                         +43 664 142 6563
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="w-4 h-4 text-gray-700 flex-shrink-0" />
+                      <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:mijo.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light hover:text-gray-700 transition-colors"
+                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
                       >
                         mijo.petrovic@pe-solutions.at
                       </a>
@@ -425,25 +425,25 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Magdalena Petrovic
                     </h4>
-                    <p className="text-gray-700 font-pe-solutions-light text-sm">
+                    <p className="text-black font-pe-solutions-light text-sm">
                       Assistenz der Geschäftsführung
                     </p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
-                      <Phone className="w-4 h-4 text-gray-700 flex-shrink-0" />
+                      <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+4326227400270"
-                        className="text-black font-pe-solutions-light hover:text-gray-700 transition-colors"
+                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
                       >
                         +43 2622 74 00 270
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="w-4 h-4 text-gray-700 flex-shrink-0" />
+                      <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:magdalena.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light hover:text-gray-700 transition-colors"
+                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
                       >
                         magdalena.petrovic@pe-solutions.at
                       </a>

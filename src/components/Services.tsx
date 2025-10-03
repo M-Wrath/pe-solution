@@ -157,7 +157,7 @@ const Services = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-gray-800 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
             <span className="text-black font-medium">
               Von der Planung bis zur Ausführung
@@ -189,7 +189,7 @@ const Services = () => {
             >
               {/* Service Icon */}
               <div className="w-14 h-14 mx-auto rounded-lg flex items-center justify-center mb-5 transition-all duration-200 bg-gray-100 border border-gray-300 group-hover:bg-green-50 group-hover:border-green-600">
-                <service.icon className="w-7 h-7 text-gray-700 group-hover:text-green-600 transition-colors duration-200" />
+                <service.icon className="w-7 h-7 text-black group-hover:text-green-600 transition-colors duration-200" />
               </div>
 
               {/* Service Title */}

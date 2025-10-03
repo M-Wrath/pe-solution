@@ -192,7 +192,7 @@ const Portfolio = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-gray-800 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
             Entdecken Sie unsere{" "}
             <span className="text-green-600 font-semibold">
@@ -224,7 +224,7 @@ const Portfolio = () => {
               className={`px-4 py-2 rounded-lg font-pe-solutions-light font-medium transition-all duration-200 text-sm ${
                 selectedCategory === category.id
                   ? "bg-green-600 text-white shadow-sm"
-                  : "bg-white text-gray-700 border-2 border-gray-300 hover:border-green-600 hover:text-green-600"
+                  : "bg-white text-black border-2 border-gray-300 hover:border-green-600 hover:text-green-600"
               }`}
             >
               {category.name}
