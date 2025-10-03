@@ -518,8 +518,6 @@ const Hero = () => {
                 cy="250"
                 r="3"
                 fill="#16a34a"
-                initial={{ offsetDistance: "0%" }}
-                animate={{ offsetDistance: "100%" }}
                 transition={{
                   duration: 3,
                   delay: 4,
