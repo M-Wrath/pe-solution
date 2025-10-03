@@ -207,7 +207,7 @@ const Hero = () => {
             {/* Professional Trust Indicators */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-4 sm:gap-6 items-center text-gray-600"
+              className="flex flex-wrap gap-4 sm:gap-6 items-center text-gray-700"
             >
               {[
                 { icon: Shield, text: "Vollständig Zertifiziert" },

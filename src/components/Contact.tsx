@@ -81,7 +81,7 @@ const Contact = () => {
             Bereit für Ihr <span className="text-green-600">Projekt</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-600 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
             Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-green-600 font-semibold">
               kostenlose Beratung
@@ -110,7 +110,7 @@ const Contact = () => {
                 <h3 className="text-xl font-pe-solutions font-black text-black mb-2">
                   Lassen Sie uns sprechen
                 </h3>
-                <p className="text-gray-600 font-pe-solutions-light text-sm">
+                <p className="text-gray-700 font-pe-solutions-light text-sm">
                   Erzählen Sie uns von Ihrem Elektrotechnik-Projekt
                 </p>
               </div>
@@ -260,7 +260,7 @@ const Contact = () => {
                     >
                       🚨 Dringende Anfrage
                     </label>
-                    <p className="text-gray-600 text-sm font-pe-solutions-light mt-1">
+                    <p className="text-gray-700 text-sm font-pe-solutions-light mt-1">
                       Ankreuzen für schnelle Prioritätsbearbeitung
                     </p>
                   </div>
@@ -300,19 +300,19 @@ const Contact = () => {
 
                 {/* Trust indicators */}
                 <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-200">
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Kostenlose Beratung
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Schnelle Antwort
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
+                  <div className="flex items-center gap-2 text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-xs font-pe-solutions-light">
                       Zertifiziert & Versichert
@@ -353,7 +353,7 @@ const Contact = () => {
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-gray-600 font-pe-solutions-light text-sm leading-relaxed"
+                          className="text-gray-700 font-pe-solutions-light text-sm leading-relaxed"
                         >
                           {detail}
                         </p>
@@ -390,7 +390,7 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Ing. Mijo Petrovic
                     </h4>
-                    <p className="text-gray-600 font-pe-solutions-light text-sm">
+                    <p className="text-gray-700 font-pe-solutions-light text-sm">
                       Geschäftsführer
                     </p>
                   </div>
@@ -425,7 +425,7 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Magdalena Petrovic
                     </h4>
-                    <p className="text-gray-600 font-pe-solutions-light text-sm">
+                    <p className="text-gray-700 font-pe-solutions-light text-sm">
                       Assistenz der Geschäftsführung
                     </p>
                   </div>

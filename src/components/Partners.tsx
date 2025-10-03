@@ -114,7 +114,7 @@ const Partners = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-gray-600 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-gray-700 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
             Wir betreuen{" "}
             <span className="text-green-600 font-semibold">
@@ -169,7 +169,7 @@ const Partners = () => {
           {/* Subtle bottom text */}
           <motion.p
             variants={cardVariants}
-            className="text-center mt-6 text-sm text-gray-600 font-pe-solutions-light"
+            className="text-center mt-6 text-sm text-gray-700 font-pe-solutions-light"
           >
             Vertrauen Sie auf unsere{" "}
             <span className="text-green-600 font-medium">

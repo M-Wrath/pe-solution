@@ -92,32 +92,32 @@ const Footer = () => {
                 </p>
               </div>
 
-              <p className="text-gray-600 font-pe-solutions-light text-sm mb-4 leading-relaxed">
+              <p className="text-gray-700 font-pe-solutions-light text-sm mb-4 leading-relaxed">
                 Elektrotechnik aus Österreich. Beratung, Planung und Ausführung
                 mit höchster Qualität und Innovation.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-700">
                   <Phone className="w-4 h-4 text-green-600" />
                   <span className="font-pe-solutions-light text-sm">
                     +43 664 142 6563
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4 text-green-600" />
                   <span className="font-pe-solutions-light text-sm">
                     office@pe-solutions.at
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-700">
                   <MapPin className="w-4 h-4 text-green-600" />
                   <span className="font-pe-solutions-light text-sm">
                     2604 Theresienfeld, Bahnstraße 31
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-700">
                   <Clock className="w-4 h-4 text-green-600" />
                   <span className="font-pe-solutions-light text-sm">
                     Mo-Fr: 8:00-17:00
@@ -233,7 +233,7 @@ const Footer = () => {
                     href={social.href}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 ${social.color} transition-all duration-200`}
+                    className={`w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 ${social.color} transition-all duration-200`}
                   >
                     <social.icon className="w-4 h-4" />
                   </motion.a>
@@ -242,13 +242,13 @@ const Footer = () => {
 
               {/* Copyright */}
               <div className="text-center">
-                <p className="text-gray-600 font-pe-solutions-light text-sm">
+                <p className="text-gray-700 font-pe-solutions-light text-sm">
                   © {currentYear} PE Solutions e.U. Alle Rechte vorbehalten.
                 </p>
                 <p className="text-gray-500 font-pe-solutions-light text-xs mt-0.5">
                   Zertifiziert • Versichert • Professionelle Elektrotechnik
                 </p>
-                <p className="text-gray-600 font-pe-solutions-light text-xs mt-1">
+                <p className="text-gray-700 font-pe-solutions-light text-xs mt-1">
                   Made with <span className="text-red-500">❤️</span> by{" "}
                   <span className="text-black font-bold">MASOUD</span>
                 </p>
