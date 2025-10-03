@@ -8,7 +8,7 @@ const About = () => {
           {/* Section Badge */}
           <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-6 py-2 mb-8">
             <Clock className="w-5 h-5 text-green-600" />
-            <span className="text-green-600 font-pe-solutions-light font-medium">
+            <span className="text-green-600 font-inter font-medium">
               Über uns
             </span>
           </div>

@@ -92,7 +92,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <p className="text-black font-pe-solutions-light font-medium text-sm mb-4 leading-relaxed">
+              <p className="text-black font-inter font-medium text-sm mb-4 leading-relaxed">
                 Elektrotechnik aus Österreich. Beratung, Planung und Ausführung
                 mit höchster Qualität und Innovation.
               </p>
@@ -101,25 +101,25 @@ const Footer = () => {
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-black">
                   <Phone className="w-4 h-4 text-green-600" />
-                  <span className="font-pe-solutions-light font-medium text-sm">
+                  <span className="font-inter font-medium text-sm">
                     +43 664 142 6563
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-black">
                   <Mail className="w-4 h-4 text-green-600" />
-                  <span className="font-pe-solutions-light font-medium text-sm">
+                  <span className="font-inter font-medium text-sm">
                     office@pe-solutions.at
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-black">
                   <MapPin className="w-4 h-4 text-green-600" />
-                  <span className="font-pe-solutions-light font-medium text-sm">
+                  <span className="font-inter font-medium text-sm">
                     2604 Theresienfeld, Bahnstraße 31
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-black">
                   <Clock className="w-4 h-4 text-green-600" />
-                  <span className="font-pe-solutions-light font-medium text-sm">
+                  <span className="font-inter font-medium text-sm">
                     Mo-Fr: 8:00-17:00
                   </span>
                 </div>
@@ -140,7 +140,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-black font-pe-solutions-light font-medium text-sm hover:text-green-600 transition-colors duration-200"
+                      className="text-black font-inter font-medium text-sm hover:text-green-600 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -163,7 +163,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-black font-pe-solutions-light font-medium text-sm hover:text-green-600 transition-colors duration-200"
+                      className="text-black font-inter font-medium text-sm hover:text-green-600 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -188,7 +188,7 @@ const Footer = () => {
                   <p className="text-black font-pe-solutions font-semibold text-sm">
                     Ing. Mijo Petrovic
                   </p>
-                  <span className="inline-block px-2 py-1 bg-green-50 border border-green-200 text-green-700 rounded text-xs font-pe-solutions-light">
+                  <span className="inline-block px-2 py-1 bg-green-50 border border-green-200 text-green-700 rounded text-xs font-inter">
                     Geschäftsführer
                   </span>
                 </div>
@@ -196,7 +196,7 @@ const Footer = () => {
                   <p className="text-black font-pe-solutions font-semibold text-sm">
                     Magdalena Petrovic
                   </p>
-                  <span className="inline-block px-2 py-1 bg-green-50 border border-green-200 text-green-700 rounded text-xs font-pe-solutions-light">
+                  <span className="inline-block px-2 py-1 bg-green-50 border border-green-200 text-green-700 rounded text-xs font-inter">
                     Assistenz der Geschäftsführung
                   </span>
                 </div>
@@ -210,7 +210,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-black font-pe-solutions-light font-medium text-sm hover:text-green-600 transition-colors duration-200"
+                      className="text-black font-inter font-medium text-sm hover:text-green-600 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -242,13 +242,13 @@ const Footer = () => {
 
               {/* Copyright */}
               <div className="text-center">
-                <p className="text-black font-pe-solutions-light font-medium text-sm">
+                <p className="text-black font-inter font-medium text-sm">
                   © {currentYear} PE Solutions e.U. Alle Rechte vorbehalten.
                 </p>
-                <p className="text-black font-pe-solutions-light font-medium text-xs mt-0.5">
+                <p className="text-black font-inter font-medium text-xs mt-0.5">
                   Zertifiziert • Versichert • Professionelle Elektrotechnik
                 </p>
-                <p className="text-black font-pe-solutions-light font-medium text-xs mt-1">
+                <p className="text-black font-inter font-medium text-xs mt-1">
                   Made with <span className="text-red-500">❤️</span> by{" "}
                   <span className="text-black font-bold">MASOUD</span>
                 </p>
@@ -256,10 +256,10 @@ const Footer = () => {
 
               {/* Legal Information */}
               <div className="flex flex-col sm:flex-row items-center gap-2">
-                <div className="px-2.5 py-0.5 bg-green-50 border border-green-200 text-green-700 rounded-lg text-xs font-pe-solutions-light">
+                <div className="px-2.5 py-0.5 bg-green-50 border border-green-200 text-green-700 rounded-lg text-xs font-inter">
                   UID: ATU78204006
                 </div>
-                <div className="px-2.5 py-0.5 bg-green-50 border border-green-200 text-green-700 rounded-lg text-xs font-pe-solutions-light">
+                <div className="px-2.5 py-0.5 bg-green-50 border border-green-200 text-green-700 rounded-lg text-xs font-inter">
                   FB: 582554y
                 </div>
               </div>

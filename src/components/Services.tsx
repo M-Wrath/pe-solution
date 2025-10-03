@@ -142,7 +142,7 @@ const Services = () => {
             className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4"
           >
             <Wrench className="w-4 h-4 text-green-600" />
-            <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
+            <span className="text-green-600 font-inter font-medium text-sm">
               Unsere Dienstleistungen
             </span>
           </motion.div>
@@ -157,7 +157,7 @@ const Services = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-inter font-medium max-w-3xl mx-auto leading-relaxed"
           >
             <span className="text-black font-semibold">
               Von der Planung bis zur Ausführung
@@ -205,7 +205,7 @@ const Services = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-black font-pe-solutions-light font-medium mb-5 text-sm leading-relaxed">
+              <p className="text-black font-inter font-medium mb-5 text-sm leading-relaxed">
                 {service.description}
               </p>
 
@@ -222,7 +222,7 @@ const Services = () => {
               </div>
 
               {/* Price Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-lg font-pe-solutions-light font-semibold text-xs bg-gray-100 text-black border border-gray-300 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-200">
+              <div className="inline-flex items-center px-4 py-2 rounded-lg font-inter font-semibold text-xs bg-gray-100 text-black border border-gray-300 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-200">
                 {service.price}
               </div>
             </motion.div>
@@ -246,7 +246,7 @@ const Services = () => {
               y: -1,
             }}
             whileTap={{ scale: 0.98 }}
-            className="px-6 py-3 bg-green-600 text-white font-pe-solutions-light font-semibold text-sm rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-sm hover:shadow-md"
+            className="px-6 py-3 bg-green-600 text-white font-inter font-semibold text-sm rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-sm hover:shadow-md"
           >
             Kostenlose Beratung vereinbaren
           </motion.button>

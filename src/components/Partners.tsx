@@ -100,7 +100,7 @@ const Partners = () => {
             className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4"
           >
             <Handshake className="w-4 h-4 text-green-600" />
-            <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
+            <span className="text-green-600 font-inter font-medium text-sm">
               Partnerfirmen
             </span>
           </motion.div>
@@ -114,7 +114,7 @@ const Partners = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-inter font-medium max-w-3xl mx-auto leading-relaxed"
           >
             Wir betreuen{" "}
             <span className="text-green-600 font-semibold">
@@ -169,7 +169,7 @@ const Partners = () => {
           {/* Subtle bottom text */}
           <motion.p
             variants={cardVariants}
-            className="text-center mt-6 text-sm text-gray-700 font-pe-solutions-light"
+            className="text-center mt-6 text-sm text-gray-700 font-inter"
           >
             Vertrauen Sie auf unsere{" "}
             <span className="text-green-600 font-medium">

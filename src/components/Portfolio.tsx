@@ -178,7 +178,7 @@ const Portfolio = () => {
             className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4"
           >
             <Camera className="w-4 h-4 text-green-600" />
-            <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
+            <span className="text-green-600 font-inter font-medium text-sm">
               Unsere Referenzen
             </span>
           </motion.div>
@@ -192,7 +192,7 @@ const Portfolio = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-inter font-medium max-w-3xl mx-auto leading-relaxed"
           >
             Entdecken Sie unsere{" "}
             <span className="text-green-600 font-semibold">
@@ -221,7 +221,7 @@ const Portfolio = () => {
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-lg font-pe-solutions-light font-medium transition-all duration-200 text-sm ${
+              className={`px-4 py-2 rounded-lg font-inter font-medium transition-all duration-200 text-sm ${
                 selectedCategory === category.id
                   ? "bg-green-600 text-white shadow-sm"
                   : "bg-white text-black border-2 border-gray-300 hover:border-green-600 hover:text-green-600"
@@ -259,12 +259,12 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                 {/* Value Badge */}
-                <div className="absolute top-3 right-3 bg-black/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg font-pe-solutions-light font-semibold text-xs shadow-lg">
+                <div className="absolute top-3 right-3 bg-black/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg font-inter font-semibold text-xs shadow-lg">
                   {project.value}
                 </div>
 
                 {/* Category Badge */}
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-lg font-pe-solutions-light font-medium text-xs capitalize shadow-md">
+                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-lg font-inter font-medium text-xs capitalize shadow-md">
                   {project.category}
                 </div>
               </div>
@@ -302,7 +302,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-black font-pe-solutions-light font-medium mb-4 leading-relaxed text-sm">
+                <p className="text-black font-inter font-medium mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
@@ -326,7 +326,7 @@ const Portfolio = () => {
                 {/* View Details Button */}
                 <motion.button
                   whileHover={{ x: 2 }}
-                  className="flex items-center gap-2 text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors duration-200 text-sm"
+                  className="flex items-center gap-2 text-black font-inter font-medium hover:text-green-600 transition-colors duration-200 text-sm"
                 >
                   Details ansehen
                   <ArrowRight className="w-4 h-4" />

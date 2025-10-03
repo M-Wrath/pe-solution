@@ -72,7 +72,7 @@ const Contact = () => {
         >
           <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-6 py-2 mb-6">
             <Send className="w-5 h-5 text-green-600" />
-            <span className="text-green-600 font-pe-solutions-light font-medium">
+            <span className="text-green-600 font-inter font-medium">
               Kontakt aufnehmen
             </span>
           </div>
@@ -81,7 +81,7 @@ const Contact = () => {
             Bereit für Ihr <span className="text-green-600">Projekt</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-black font-inter font-medium max-w-3xl mx-auto leading-relaxed">
             Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-green-600 font-semibold">
               kostenlose Beratung
@@ -103,14 +103,14 @@ const Contact = () => {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 mb-4">
                   <Send className="w-4 h-4 text-green-600" />
-                  <span className="text-green-600 font-pe-solutions-light font-medium text-sm">
+                  <span className="text-green-600 font-inter font-medium text-sm">
                     Kontaktformular
                   </span>
                 </div>
                 <h3 className="text-xl font-pe-solutions font-black text-black mb-2">
                   Lassen Sie uns sprechen
                 </h3>
-                <p className="text-black font-pe-solutions-light font-medium text-sm">
+                <p className="text-black font-inter font-medium text-sm">
                   Erzählen Sie uns von Ihrem Elektrotechnik-Projekt
                 </p>
               </div>
@@ -118,7 +118,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-inter font-medium mb-2 text-sm">
                       Vollständiger Name *
                     </label>
                     <div className="relative">
@@ -128,14 +128,14 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-pe-solutions-light"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-inter"
                         placeholder="Ihr vollständiger Name"
                       />
                     </div>
                   </div>
 
                   <div className="group">
-                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-inter font-medium mb-2 text-sm">
                       E-Mail-Adresse *
                     </label>
                     <div className="relative">
@@ -145,7 +145,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-pe-solutions-light"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-inter"
                         placeholder="ihre@email.at"
                       />
                     </div>
@@ -154,7 +154,7 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-inter font-medium mb-2 text-sm">
                       Telefonnummer
                     </label>
                     <div className="relative">
@@ -163,14 +163,14 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-pe-solutions-light"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-inter"
                         placeholder="+43 664 123 4567"
                       />
                     </div>
                   </div>
 
                   <div className="group">
-                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-inter font-medium mb-2 text-sm">
                       Benötigter Service
                     </label>
                     <div className="relative">
@@ -179,7 +179,7 @@ const Contact = () => {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black focus:border-green-600 focus:outline-none transition-all duration-200 font-pe-solutions-light appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black focus:border-green-600 focus:outline-none transition-all duration-200 font-inter appearance-none cursor-pointer"
                       >
                         <option value="" className="bg-white">
                           Service auswählen
@@ -229,7 +229,7 @@ const Contact = () => {
                 </div>
 
                 <div className="group">
-                  <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
+                  <label className="block text-black font-inter font-medium mb-2 text-sm">
                     Projekt Details
                   </label>
                   <div className="relative">
@@ -238,7 +238,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-pe-solutions-light resize-none"
+                      className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-green-600 focus:outline-none transition-all duration-200 font-inter resize-none"
                       placeholder="Erzählen Sie uns von Ihrem Elektrotechnik-Projekt, Zeitrahmen und spezifischen Anforderungen..."
                     ></textarea>
                   </div>
@@ -256,11 +256,11 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="emergency"
-                      className="text-black font-pe-solutions-light font-medium cursor-pointer"
+                      className="text-black font-inter font-medium cursor-pointer"
                     >
                       🚨 Dringende Anfrage
                     </label>
-                    <p className="text-black text-sm font-pe-solutions-light mt-1">
+                    <p className="text-black text-sm font-inter mt-1">
                       Ankreuzen für schnelle Prioritätsbearbeitung
                     </p>
                   </div>
@@ -271,7 +271,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   whileHover={{ y: -1 }}
                   disabled={isSubmitted}
-                  className={`relative w-full py-3 rounded-lg font-pe-solutions-light font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow-md ${
+                  className={`relative w-full py-3 rounded-lg font-inter font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow-md ${
                     isSubmitted
                       ? "bg-green-600 text-white"
                       : formData.emergency
@@ -299,22 +299,22 @@ const Contact = () => {
                 </motion.button>
 
                 {/* Trust indicators */}
-                <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-200">
+                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 pt-4 border-t border-gray-200">
                   <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-xs font-pe-solutions-light">
+                    <span className="text-xs font-inter">
                       Kostenlose Beratung
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-xs font-pe-solutions-light">
+                    <span className="text-xs font-inter">
                       Schnelle Antwort
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-black">
                     <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-xs font-pe-solutions-light">
+                    <span className="text-xs font-inter">
                       Zertifiziert & Versichert
                     </span>
                   </div>
@@ -353,7 +353,7 @@ const Contact = () => {
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-black font-pe-solutions-light font-medium text-sm leading-relaxed"
+                          className="text-black font-inter font-medium text-sm leading-relaxed"
                         >
                           {detail}
                         </p>
@@ -384,13 +384,13 @@ const Contact = () => {
                 {/* Geschäftsführung */}
                 <div className="pb-6 border-b border-gray-200">
                   <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-pe-solutions-light font-semibold rounded-full mb-3 border border-green-200">
+                    <span className="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-inter font-semibold rounded-full mb-3 border border-green-200">
                       Geschäftsführung
                     </span>
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Ing. Mijo Petrovic
                     </h4>
-                    <p className="text-black font-pe-solutions-light font-medium text-sm">
+                    <p className="text-black font-inter font-medium text-sm">
                       Geschäftsführer
                     </p>
                   </div>
@@ -399,7 +399,7 @@ const Contact = () => {
                       <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+436641426563"
-                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
+                        className="text-black font-inter font-medium hover:text-green-600 transition-colors"
                       >
                         +43 664 142 6563
                       </a>
@@ -408,7 +408,7 @@ const Contact = () => {
                       <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:mijo.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
+                        className="text-black font-inter font-medium hover:text-green-600 transition-colors"
                       >
                         mijo.petrovic@pe-solutions.at
                       </a>
@@ -419,13 +419,13 @@ const Contact = () => {
                 {/* Assistenz */}
                 <div>
                   <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-pe-solutions-light font-semibold rounded-full mb-3 border border-green-200">
+                    <span className="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-inter font-semibold rounded-full mb-3 border border-green-200">
                       Sekretariat
                     </span>
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Magdalena Petrovic
                     </h4>
-                    <p className="text-black font-pe-solutions-light font-medium text-sm">
+                    <p className="text-black font-inter font-medium text-sm">
                       Assistenz der Geschäftsführung
                     </p>
                   </div>
@@ -434,7 +434,7 @@ const Contact = () => {
                       <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+4326227400270"
-                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
+                        className="text-black font-inter font-medium hover:text-green-600 transition-colors"
                       >
                         +43 2622 74 00 270
                       </a>
@@ -443,7 +443,7 @@ const Contact = () => {
                       <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:magdalena.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
+                        className="text-black font-inter font-medium hover:text-green-600 transition-colors"
                       >
                         magdalena.petrovic@pe-solutions.at
                       </a>

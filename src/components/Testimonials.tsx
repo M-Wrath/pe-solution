@@ -93,7 +93,7 @@ const Testimonials = () => {
             className="inline-flex items-center gap-2 bg-gray-100 border border-gray-300 rounded-full px-6 py-2 mb-6"
           >
             <Star className="w-5 h-5 text-gray-700" />
-            <span className="text-gray-700 font-pe-solutions-light font-medium">
+            <span className="text-gray-700 font-inter font-medium">
               Bewertungen
             </span>
           </motion.div>
@@ -107,7 +107,7 @@ const Testimonials = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-lg text-gray-600 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600 font-inter max-w-3xl mx-auto leading-relaxed"
           >
             Erfahrungen unserer Kunden mit PE Solutions
           </motion.p>
@@ -145,12 +145,12 @@ const Testimonials = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-600 font-pe-solutions-light leading-relaxed mb-6 italic">
+              <p className="text-gray-600 font-inter leading-relaxed mb-6 italic">
                 "{testimonial.text}"
               </p>
 
               {/* Project Badge */}
-              <div className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 border border-gray-300 rounded-full text-sm font-pe-solutions-light font-medium mb-6">
+              <div className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 border border-gray-300 rounded-full text-sm font-inter font-medium mb-6">
                 {testimonial.project}
               </div>
 
@@ -175,7 +175,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="ml-auto text-gray-500 text-sm font-pe-solutions-light">
+                <div className="ml-auto text-gray-500 text-sm font-inter">
                   {testimonial.date}
                 </div>
               </div>
@@ -190,7 +190,7 @@ const Testimonials = () => {
           animate={inView ? "visible" : "hidden"}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 font-pe-solutions-light mb-6">
+          <p className="text-gray-600 font-inter mb-6">
             Haben Sie Fragen zu unseren Dienstleistungen?
           </p>
           <motion.button

@@ -160,7 +160,7 @@ const Navbar = () => {
                   >
                     <item.icon className="w-4 h-4 group-hover:text-green-600 transition-colors duration-300" />
                   </motion.div>
-                  <span className="font-pe-solutions-light font-semibold text-sm whitespace-nowrap">
+                  <span className="font-inter font-semibold text-sm whitespace-nowrap">
                     {item.name}
                   </span>
                   {/* Enhanced underline effect with shadow */}
@@ -303,7 +303,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-gray-200 group-hover:border-green-600 transition-all duration-300">
                       <item.icon className="w-5 h-5 group-hover:text-green-600" />
                     </div>
-                    <span className="font-pe-solutions-light font-semibold text-base">
+                    <span className="font-inter font-semibold text-base">
                       {item.name}
                     </span>
                   </motion.a>
