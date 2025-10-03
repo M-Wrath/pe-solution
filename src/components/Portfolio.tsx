@@ -192,7 +192,7 @@ const Portfolio = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-gray-700 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-gray-800 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
           >
             Entdecken Sie unsere{" "}
             <span className="text-green-600 font-semibold">
@@ -290,7 +290,7 @@ const Portfolio = () => {
                 </h3>
 
                 {/* Location & Date */}
-                <div className="flex items-center gap-3 mb-3 text-gray-700 text-xs font-pe-solutions-light">
+                <div className="flex items-center gap-3 mb-3 text-gray-800 text-xs font-medium">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
                     {project.location}
@@ -302,7 +302,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-800 font-pe-solutions-light mb-4 leading-relaxed text-sm">
+                <p className="text-gray-900 font-pe-solutions-light mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
 

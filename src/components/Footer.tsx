@@ -92,7 +92,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <p className="text-gray-700 font-pe-solutions-light text-sm mb-4 leading-relaxed">
+              <p className="text-gray-800 font-pe-solutions-light text-sm mb-4 leading-relaxed">
                 Elektrotechnik aus Österreich. Beratung, Planung und Ausführung
                 mit höchster Qualität und Innovation.
               </p>

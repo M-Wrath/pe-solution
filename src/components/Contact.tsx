@@ -81,7 +81,7 @@ const Contact = () => {
             Bereit für Ihr <span className="text-green-600">Projekt</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-800 font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
             Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-green-600 font-semibold">
               kostenlose Beratung
