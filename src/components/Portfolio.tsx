@@ -279,7 +279,7 @@ const Portfolio = () => {
                       className="w-3.5 h-3.5 fill-green-600 text-green-600"
                     />
                   ))}
-                  <span className="text-gray-700 text-xs font-pe-solutions-light ml-1">
+                  <span className="text-black text-xs font-medium ml-1">
                     Perfect Rating
                   </span>
                 </div>
@@ -290,7 +290,7 @@ const Portfolio = () => {
                 </h3>
 
                 {/* Location & Date */}
-                <div className="flex items-center gap-3 mb-3 text-gray-800 text-xs font-medium">
+                <div className="flex items-center gap-3 mb-3 text-black text-xs font-medium">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
                     {project.location}
@@ -302,7 +302,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-900 font-pe-solutions-light mb-4 leading-relaxed text-sm">
+                <p className="text-black font-pe-solutions-light mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
@@ -311,13 +311,13 @@ const Portfolio = () => {
                   {project.features.slice(0, 2).map((feature, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-xs font-pe-solutions-light border border-gray-200"
+                      className="px-3 py-1 bg-gray-100 text-black rounded-lg text-xs font-medium border border-gray-200"
                     >
                       {feature}
                     </span>
                   ))}
                   {project.features.length > 2 && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg text-xs font-pe-solutions-light">
+                    <span className="px-3 py-1 bg-gray-100 text-black border border-gray-300 rounded-lg text-xs font-medium">
                       +{project.features.length - 2} more
                     </span>
                   )}
@@ -326,7 +326,7 @@ const Portfolio = () => {
                 {/* View Details Button */}
                 <motion.button
                   whileHover={{ x: 2 }}
-                  className="flex items-center gap-2 text-gray-700 font-pe-solutions-light font-medium hover:text-green-600 transition-colors duration-200 text-sm"
+                  className="flex items-center gap-2 text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors duration-200 text-sm"
                 >
                   Details ansehen
                   <ArrowRight className="w-4 h-4" />

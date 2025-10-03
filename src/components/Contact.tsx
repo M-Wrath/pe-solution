@@ -110,7 +110,7 @@ const Contact = () => {
                 <h3 className="text-xl font-pe-solutions font-black text-black mb-2">
                   Lassen Sie uns sprechen
                 </h3>
-                <p className="text-gray-700 font-pe-solutions-light text-sm">
+                <p className="text-black font-pe-solutions-light text-sm">
                   Erzählen Sie uns von Ihrem Elektrotechnik-Projekt
                 </p>
               </div>
@@ -118,7 +118,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="group">
-                    <label className="block text-gray-700 font-pe-solutions-light font-medium mb-2 text-sm">
+                    <label className="block text-black font-pe-solutions-light font-medium mb-2 text-sm">
                       Vollständiger Name *
                     </label>
                     <div className="relative">

@@ -125,7 +125,7 @@ const Navbar = () => {
                   solutions.
                 </span>
               </h1>
-              <p className="text-xs text-gray-700 font-pe-solutions-light">
+              <p className="text-xs text-black font-pe-solutions-light">
                 Beratung | Planung | Ausführung
               </p>
               <p

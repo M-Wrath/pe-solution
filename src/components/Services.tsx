@@ -166,8 +166,7 @@ const Services = () => {
             <span className="text-green-600 font-semibold">
               erstklassige elektrotechnische Dienstleistungen
             </span>{" "}
-            mit <span className="text-black">modernster Technologie</span>{" "}
-            und{" "}
+            mit <span className="text-black">modernster Technologie</span> und{" "}
             <span className="text-black">unvergleichlicher Expertise</span>.
           </motion.p>
         </motion.div>
@@ -199,7 +198,7 @@ const Services = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-gray-900 font-pe-solutions-light mb-5 text-sm leading-relaxed">
+              <p className="text-black font-pe-solutions-light mb-5 text-sm leading-relaxed">
                 {service.description}
               </p>
 
@@ -208,7 +207,7 @@ const Services = () => {
                 {service.features.map((feature, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-100 text-gray-900 border border-gray-200 group-hover:border-green-200 group-hover:bg-green-50 group-hover:text-green-800 transition-all duration-200"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-100 text-black border border-gray-200 group-hover:border-green-200 group-hover:bg-green-50 group-hover:text-green-800 transition-all duration-200"
                   >
                     {feature}
                   </span>
@@ -216,7 +215,7 @@ const Services = () => {
               </div>
 
               {/* Price Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-lg font-pe-solutions-light font-semibold text-xs bg-gray-100 text-gray-900 border border-gray-300 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-200">
+              <div className="inline-flex items-center px-4 py-2 rounded-lg font-pe-solutions-light font-semibold text-xs bg-gray-100 text-black border border-gray-300 group-hover:bg-green-600 group-hover:text-white group-hover:border-green-600 transition-all duration-200">
                 {service.price}
               </div>
             </motion.div>
