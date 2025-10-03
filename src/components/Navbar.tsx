@@ -125,11 +125,11 @@ const Navbar = () => {
                   solutions.
                 </span>
               </h1>
-              <p className="text-xs text-black font-pe-solutions-light">
+              <p className="text-xs text-black font-pe-solutions-light font-medium">
                 Beratung | Planung | Ausführung
               </p>
               <p
-                className="text-xs text-green-600 font-pe-solutions-light"
+                className="text-xs text-green-600 font-pe-solutions-light font-medium"
                 style={{
                   textShadow: "0 1px 3px rgba(22, 163, 74, 0.1)",
                 }}
@@ -160,7 +160,7 @@ const Navbar = () => {
                   >
                     <item.icon className="w-4 h-4 group-hover:text-green-600 transition-colors duration-300" />
                   </motion.div>
-                  <span className="font-pe-solutions-light font-medium text-sm whitespace-nowrap">
+                  <span className="font-pe-solutions-light font-semibold text-sm whitespace-nowrap">
                     {item.name}
                   </span>
                   {/* Enhanced underline effect with shadow */}
@@ -303,7 +303,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white border border-gray-200 group-hover:border-green-600 transition-all duration-300">
                       <item.icon className="w-5 h-5 group-hover:text-green-600" />
                     </div>
-                    <span className="font-pe-solutions-light font-medium text-base">
+                    <span className="font-pe-solutions-light font-semibold text-base">
                       {item.name}
                     </span>
                   </motion.a>

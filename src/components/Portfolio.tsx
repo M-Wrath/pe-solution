@@ -192,14 +192,14 @@ const Portfolio = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
           >
             Entdecken Sie unsere{" "}
             <span className="text-green-600 font-semibold">
               hochwertigen Elektrotechnik-Projekte
             </span>
             .
-            <span className="text-black font-medium">
+            <span className="text-black font-semibold">
               {" "}
               Jedes Projekt erzählt eine Geschichte
             </span>{" "}
@@ -279,7 +279,7 @@ const Portfolio = () => {
                       className="w-3.5 h-3.5 fill-green-600 text-green-600"
                     />
                   ))}
-                  <span className="text-black text-xs font-medium ml-1">
+                  <span className="text-black text-xs font-semibold ml-1">
                     Perfect Rating
                   </span>
                 </div>
@@ -290,7 +290,7 @@ const Portfolio = () => {
                 </h3>
 
                 {/* Location & Date */}
-                <div className="flex items-center gap-3 mb-3 text-black text-xs font-medium">
+                <div className="flex items-center gap-3 mb-3 text-black text-xs font-semibold">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
                     {project.location}
@@ -302,7 +302,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-black font-pe-solutions-light mb-4 leading-relaxed text-sm">
+                <p className="text-black font-pe-solutions-light font-medium mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
 

@@ -114,7 +114,7 @@ const Partners = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
           >
             Wir betreuen{" "}
             <span className="text-green-600 font-semibold">

@@ -157,17 +157,24 @@ const Services = () => {
 
           <motion.p
             variants={cardVariants}
-            className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed"
           >
-            <span className="text-black font-medium">
+            <span className="text-black font-semibold">
               Von der Planung bis zur Ausführung
             </span>{" "}
             bieten wir{" "}
             <span className="text-green-600 font-semibold">
               erstklassige elektrotechnische Dienstleistungen
             </span>{" "}
-            mit <span className="text-black">modernster Technologie</span> und{" "}
-            <span className="text-black">unvergleichlicher Expertise</span>.
+            mit{" "}
+            <span className="text-black font-semibold">
+              modernster Technologie
+            </span>{" "}
+            und{" "}
+            <span className="text-black font-semibold">
+              unvergleichlicher Expertise
+            </span>
+            .
           </motion.p>
         </motion.div>
 
@@ -198,7 +205,7 @@ const Services = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-black font-pe-solutions-light mb-5 text-sm leading-relaxed">
+              <p className="text-black font-pe-solutions-light font-medium mb-5 text-sm leading-relaxed">
                 {service.description}
               </p>
 

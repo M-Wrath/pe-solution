@@ -107,13 +107,13 @@ const Hero = () => {
             {/* Subtitle */}
             <motion.div
               variants={itemVariants}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 font-pe-solutions-light mb-8 max-w-2xl leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 font-pe-solutions-light font-medium mb-8 max-w-2xl leading-relaxed"
             >
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.9 }}
-                className="text-black font-medium mb-3"
+                className="text-black font-semibold mb-3"
                 style={{
                   letterSpacing: "0.02em",
                   textShadow: "0 2px 6px rgba(0, 0, 0, 0.06)",
@@ -162,7 +162,7 @@ const Hero = () => {
                   >
                     <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 group-hover:text-green-600 transition-colors duration-300" />
                   </motion.div>
-                  <span className="font-pe-solutions-light font-medium text-sm sm:text-base text-gray-700 group-hover:text-green-600 transition-colors duration-300">
+                  <span className="font-pe-solutions-light font-semibold text-sm sm:text-base text-gray-700 group-hover:text-green-600 transition-colors duration-300">
                     {feature.text}
                   </span>
                 </motion.div>
@@ -195,7 +195,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.6 }}
                 href="tel:+436641426563"
-                className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-pe-solutions-light font-semibold text-sm rounded-lg hover:border-green-600 hover:text-green-600 transition-colors duration-200 shadow-sm hover:shadow-md"
+                className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-pe-solutions-light font-bold text-sm rounded-lg hover:border-green-600 hover:text-green-600 transition-colors duration-200 shadow-sm hover:shadow-md"
                 whileTap={{ scale: 0.98 }}
                 whileHover={{ y: -1 }}
               >
@@ -229,7 +229,7 @@ const Hero = () => {
                   >
                     <indicator.icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 group-hover:text-green-600 transition-colors duration-300" />
                   </motion.div>
-                  <span className="font-pe-solutions-light font-medium text-sm sm:text-base group-hover:text-green-600 transition-colors duration-300">
+                  <span className="font-pe-solutions-light font-semibold text-sm sm:text-base group-hover:text-green-600 transition-colors duration-300">
                     {indicator.text}
                   </span>
                 </motion.div>
@@ -557,7 +557,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 3.8 }}
               className="absolute top-10 right-10 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg px-3 py-2 shadow-md"
             >
-              <div className="text-xs font-pe-solutions-light font-semibold text-gray-700">
+              <div className="text-xs font-pe-solutions-light font-bold text-gray-700">
                 Smart Grid
               </div>
             </motion.div>
@@ -567,7 +567,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 4 }}
               className="absolute bottom-20 left-10 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg px-3 py-2 shadow-md"
             >
-              <div className="text-xs font-pe-solutions-light font-semibold text-gray-700">
+              <div className="text-xs font-pe-solutions-light font-bold text-gray-700">
                 IoT Connected
               </div>
             </motion.div>

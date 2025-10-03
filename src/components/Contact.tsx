@@ -81,7 +81,7 @@ const Contact = () => {
             Bereit für Ihr <span className="text-green-600">Projekt</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-black font-pe-solutions-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-black font-pe-solutions-light font-medium max-w-3xl mx-auto leading-relaxed">
             Kontaktieren Sie PE Solutions heute für eine{" "}
             <span className="text-green-600 font-semibold">
               kostenlose Beratung
@@ -110,7 +110,7 @@ const Contact = () => {
                 <h3 className="text-xl font-pe-solutions font-black text-black mb-2">
                   Lassen Sie uns sprechen
                 </h3>
-                <p className="text-black font-pe-solutions-light text-sm">
+                <p className="text-black font-pe-solutions-light font-medium text-sm">
                   Erzählen Sie uns von Ihrem Elektrotechnik-Projekt
                 </p>
               </div>
@@ -353,7 +353,7 @@ const Contact = () => {
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-black font-pe-solutions-light text-sm leading-relaxed"
+                          className="text-black font-pe-solutions-light font-medium text-sm leading-relaxed"
                         >
                           {detail}
                         </p>
@@ -390,7 +390,7 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Ing. Mijo Petrovic
                     </h4>
-                    <p className="text-black font-pe-solutions-light text-sm">
+                    <p className="text-black font-pe-solutions-light font-medium text-sm">
                       Geschäftsführer
                     </p>
                   </div>
@@ -399,7 +399,7 @@ const Contact = () => {
                       <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+436641426563"
-                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
+                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
                       >
                         +43 664 142 6563
                       </a>
@@ -408,7 +408,7 @@ const Contact = () => {
                       <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:mijo.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
+                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
                       >
                         mijo.petrovic@pe-solutions.at
                       </a>
@@ -425,7 +425,7 @@ const Contact = () => {
                     <h4 className="text-black font-pe-solutions font-bold text-lg">
                       Magdalena Petrovic
                     </h4>
-                    <p className="text-black font-pe-solutions-light text-sm">
+                    <p className="text-black font-pe-solutions-light font-medium text-sm">
                       Assistenz der Geschäftsführung
                     </p>
                   </div>
@@ -434,7 +434,7 @@ const Contact = () => {
                       <Phone className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="tel:+4326227400270"
-                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
+                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
                       >
                         +43 2622 74 00 270
                       </a>
@@ -443,7 +443,7 @@ const Contact = () => {
                       <Mail className="w-4 h-4 text-black flex-shrink-0" />
                       <a
                         href="mailto:magdalena.petrovic@pe-solutions.at"
-                        className="text-black font-pe-solutions-light hover:text-green-600 transition-colors"
+                        className="text-black font-pe-solutions-light font-medium hover:text-green-600 transition-colors"
                       >
                         magdalena.petrovic@pe-solutions.at
                       </a>
